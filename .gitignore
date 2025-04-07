@@ -1,0 +1,33 @@
+
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ignore data files in the data directory
+data/*.csv
+data/*.db
+
+# Python virtual environment
+venv/
+
+# IDE specific files (optional but good practice)
+.vscode/
+__pycache__/
+*.pyc

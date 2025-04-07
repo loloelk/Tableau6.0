@@ -1,0 +1,11 @@
+2025-04-07 12:47:36,247 - INFO - --- Starting Data Simulation ---
+2025-04-07 12:47:36,248 - INFO - Init DB schema...
+2025-04-07 12:47:36,248 - INFO - Initializing database...
+2025-04-07 12:47:36,250 - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 12:47:36,251 - INFO - Added column 'target_symptoms' to table 'nurse_inputs'.
+2025-04-07 12:47:36,252 - INFO - Added column 'planned_interventions' to table 'nurse_inputs'.
+2025-04-07 12:47:36,252 - INFO - Added column 'goal_status' to table 'nurse_inputs'.
+2025-04-07 12:47:36,253 - INFO - Table 'side_effects' checked/created.
+2025-04-07 12:47:36,256 - INFO - Table 'patients' checked/created.
+2025-04-07 12:47:36,257 - INFO - Database initialization complete.
+2025-04-07 12:47:36,258 - INFO - Generating patient main data...

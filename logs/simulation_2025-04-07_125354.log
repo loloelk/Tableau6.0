@@ -1,0 +1,201 @@
+2025-04-07 12:53:54,032 - INFO - --- Starting Data Simulation ---
+2025-04-07 12:53:54,032 - INFO - Init DB schema...
+2025-04-07 12:53:54,032 - INFO - Initializing database...
+2025-04-07 12:53:54,034 - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 12:53:54,034 - INFO - Table 'side_effects' checked/created.
+2025-04-07 12:53:54,035 - INFO - Table 'patients' checked/created.
+2025-04-07 12:53:54,035 - INFO - Database initialization complete.
+2025-04-07 12:53:54,035 - INFO - Generating patient main data...
+2025-04-07 12:53:54,047 - INFO - Generated main data for 50 patients.
+2025-04-07 12:53:54,058 - INFO - Saved main patient data (50) to CSVs.
+2025-04-07 12:53:54,058 - INFO - Generating EMA data...
+2025-04-07 12:53:54,127 - INFO - Generated 2836 EMA entries.
+2025-04-07 12:53:54,150 - INFO - Saved 2836 EMA entries.
+2025-04-07 12:53:54,150 - INFO - Generating side effects data (specific profiles for P001-P003)...
+2025-04-07 12:53:54,151 - INFO - Skipping SE for P001.
+2025-04-07 12:53:54,152 - INFO - Generating 1 mild/mod SE report(s) for P002.
+2025-04-07 12:53:54,153 - INFO - Side effect report saved successfully for Patient ID P002.
+2025-04-07 12:53:54,154 - INFO - Generating 3 sig SE report(s) for P003.
+2025-04-07 12:53:54,155 - INFO - Side effect report saved successfully for Patient ID P003.
+2025-04-07 12:53:54,155 - INFO - Side effect report saved successfully for Patient ID P003.
+2025-04-07 12:53:54,156 - INFO - Side effect report saved successfully for Patient ID P003.
+2025-04-07 12:53:54,158 - INFO - Side effect report saved successfully for Patient ID P006.
+2025-04-07 12:53:54,160 - INFO - Side effect report saved successfully for Patient ID P008.
+2025-04-07 12:53:54,162 - INFO - Side effect report saved successfully for Patient ID P010.
+2025-04-07 12:53:54,163 - INFO - Side effect report saved successfully for Patient ID P011.
+2025-04-07 12:53:54,167 - INFO - Side effect report saved successfully for Patient ID P017.
+2025-04-07 12:53:54,169 - INFO - Side effect report saved successfully for Patient ID P021.
+2025-04-07 12:53:54,170 - INFO - Side effect report saved successfully for Patient ID P022.
+2025-04-07 12:53:54,172 - INFO - Side effect report saved successfully for Patient ID P022.
+2025-04-07 12:53:54,175 - INFO - Side effect report saved successfully for Patient ID P025.
+2025-04-07 12:53:54,178 - INFO - Side effect report saved successfully for Patient ID P026.
+2025-04-07 12:53:54,179 - INFO - Side effect report saved successfully for Patient ID P027.
+2025-04-07 12:53:54,180 - INFO - Side effect report saved successfully for Patient ID P028.
+2025-04-07 12:53:54,182 - INFO - Side effect report saved successfully for Patient ID P030.
+2025-04-07 12:53:54,184 - INFO - Side effect report saved successfully for Patient ID P032.
+2025-04-07 12:53:54,186 - INFO - Side effect report saved successfully for Patient ID P035.
+2025-04-07 12:53:54,188 - INFO - Side effect report saved successfully for Patient ID P037.
+2025-04-07 12:53:54,189 - INFO - Side effect report saved successfully for Patient ID P038.
+2025-04-07 12:53:54,191 - INFO - Side effect report saved successfully for Patient ID P039.
+2025-04-07 12:53:54,192 - INFO - Side effect report saved successfully for Patient ID P040.
+2025-04-07 12:53:54,194 - INFO - Side effect report saved successfully for Patient ID P041.
+2025-04-07 12:53:54,195 - INFO - Side effect report saved successfully for Patient ID P041.
+2025-04-07 12:53:54,198 - INFO - Side effect report saved successfully for Patient ID P045.
+2025-04-07 12:53:54,199 - INFO - Side effect report saved successfully for Patient ID P045.
+2025-04-07 12:53:54,206 - INFO - Side effect report saved successfully for Patient ID P048.
+2025-04-07 12:53:54,208 - INFO - Side effect report saved successfully for Patient ID P048.
+2025-04-07 12:53:54,209 - INFO - Generated/attempted 29 SE reports.
+2025-04-07 12:53:54,209 - INFO - Generating nurse notes data...
+2025-04-07 12:53:54,213 - INFO - Nurse inputs saved successfully for Patient ID P001.
+2025-04-07 12:53:54,214 - INFO - Nurse inputs saved successfully for Patient ID P001.
+2025-04-07 12:53:54,214 - INFO - Nurse inputs saved successfully for Patient ID P001.
+2025-04-07 12:53:54,216 - INFO - Nurse inputs saved successfully for Patient ID P002.
+2025-04-07 12:53:54,217 - INFO - Nurse inputs saved successfully for Patient ID P002.
+2025-04-07 12:53:54,217 - INFO - Nurse inputs saved successfully for Patient ID P002.
+2025-04-07 12:53:54,219 - INFO - Nurse inputs saved successfully for Patient ID P003.
+2025-04-07 12:53:54,220 - INFO - Nurse inputs saved successfully for Patient ID P003.
+2025-04-07 12:53:54,221 - INFO - Nurse inputs saved successfully for Patient ID P003.
+2025-04-07 12:53:54,222 - INFO - Nurse inputs saved successfully for Patient ID P004.
+2025-04-07 12:53:54,223 - INFO - Nurse inputs saved successfully for Patient ID P004.
+2025-04-07 12:53:54,224 - INFO - Nurse inputs saved successfully for Patient ID P004.
+2025-04-07 12:53:54,225 - INFO - Nurse inputs saved successfully for Patient ID P005.
+2025-04-07 12:53:54,226 - INFO - Nurse inputs saved successfully for Patient ID P005.
+2025-04-07 12:53:54,226 - INFO - Nurse inputs saved successfully for Patient ID P005.
+2025-04-07 12:53:54,227 - INFO - Nurse inputs saved successfully for Patient ID P006.
+2025-04-07 12:53:54,228 - INFO - Nurse inputs saved successfully for Patient ID P006.
+2025-04-07 12:53:54,229 - INFO - Nurse inputs saved successfully for Patient ID P006.
+2025-04-07 12:53:54,230 - INFO - Nurse inputs saved successfully for Patient ID P007.
+2025-04-07 12:53:54,231 - INFO - Nurse inputs saved successfully for Patient ID P007.
+2025-04-07 12:53:54,232 - INFO - Nurse inputs saved successfully for Patient ID P007.
+2025-04-07 12:53:54,233 - INFO - Nurse inputs saved successfully for Patient ID P008.
+2025-04-07 12:53:54,233 - INFO - Nurse inputs saved successfully for Patient ID P008.
+2025-04-07 12:53:54,234 - INFO - Nurse inputs saved successfully for Patient ID P008.
+2025-04-07 12:53:54,238 - INFO - Nurse inputs saved successfully for Patient ID P009.
+2025-04-07 12:53:54,239 - INFO - Nurse inputs saved successfully for Patient ID P009.
+2025-04-07 12:53:54,241 - INFO - Nurse inputs saved successfully for Patient ID P009.
+2025-04-07 12:53:54,244 - INFO - Nurse inputs saved successfully for Patient ID P010.
+2025-04-07 12:53:54,245 - INFO - Nurse inputs saved successfully for Patient ID P010.
+2025-04-07 12:53:54,246 - INFO - Nurse inputs saved successfully for Patient ID P010.
+2025-04-07 12:53:54,247 - INFO - Nurse inputs saved successfully for Patient ID P011.
+2025-04-07 12:53:54,248 - INFO - Nurse inputs saved successfully for Patient ID P011.
+2025-04-07 12:53:54,249 - INFO - Nurse inputs saved successfully for Patient ID P011.
+2025-04-07 12:53:54,250 - INFO - Nurse inputs saved successfully for Patient ID P012.
+2025-04-07 12:53:54,251 - INFO - Nurse inputs saved successfully for Patient ID P012.
+2025-04-07 12:53:54,251 - INFO - Nurse inputs saved successfully for Patient ID P012.
+2025-04-07 12:53:54,253 - INFO - Nurse inputs saved successfully for Patient ID P013.
+2025-04-07 12:53:54,254 - INFO - Nurse inputs saved successfully for Patient ID P013.
+2025-04-07 12:53:54,255 - INFO - Nurse inputs saved successfully for Patient ID P013.
+2025-04-07 12:53:54,256 - INFO - Nurse inputs saved successfully for Patient ID P014.
+2025-04-07 12:53:54,257 - INFO - Nurse inputs saved successfully for Patient ID P014.
+2025-04-07 12:53:54,258 - INFO - Nurse inputs saved successfully for Patient ID P014.
+2025-04-07 12:53:54,259 - INFO - Nurse inputs saved successfully for Patient ID P015.
+2025-04-07 12:53:54,260 - INFO - Nurse inputs saved successfully for Patient ID P015.
+2025-04-07 12:53:54,260 - INFO - Nurse inputs saved successfully for Patient ID P015.
+2025-04-07 12:53:54,261 - INFO - Nurse inputs saved successfully for Patient ID P016.
+2025-04-07 12:53:54,262 - INFO - Nurse inputs saved successfully for Patient ID P016.
+2025-04-07 12:53:54,263 - INFO - Nurse inputs saved successfully for Patient ID P016.
+2025-04-07 12:53:54,264 - INFO - Nurse inputs saved successfully for Patient ID P017.
+2025-04-07 12:53:54,265 - INFO - Nurse inputs saved successfully for Patient ID P017.
+2025-04-07 12:53:54,265 - INFO - Nurse inputs saved successfully for Patient ID P017.
+2025-04-07 12:53:54,267 - INFO - Nurse inputs saved successfully for Patient ID P018.
+2025-04-07 12:53:54,267 - INFO - Nurse inputs saved successfully for Patient ID P018.
+2025-04-07 12:53:54,268 - INFO - Nurse inputs saved successfully for Patient ID P018.
+2025-04-07 12:53:54,270 - INFO - Nurse inputs saved successfully for Patient ID P019.
+2025-04-07 12:53:54,271 - INFO - Nurse inputs saved successfully for Patient ID P019.
+2025-04-07 12:53:54,271 - INFO - Nurse inputs saved successfully for Patient ID P019.
+2025-04-07 12:53:54,273 - INFO - Nurse inputs saved successfully for Patient ID P020.
+2025-04-07 12:53:54,273 - INFO - Nurse inputs saved successfully for Patient ID P020.
+2025-04-07 12:53:54,274 - INFO - Nurse inputs saved successfully for Patient ID P020.
+2025-04-07 12:53:54,275 - INFO - Nurse inputs saved successfully for Patient ID P021.
+2025-04-07 12:53:54,276 - INFO - Nurse inputs saved successfully for Patient ID P021.
+2025-04-07 12:53:54,277 - INFO - Nurse inputs saved successfully for Patient ID P021.
+2025-04-07 12:53:54,278 - INFO - Nurse inputs saved successfully for Patient ID P022.
+2025-04-07 12:53:54,278 - INFO - Nurse inputs saved successfully for Patient ID P022.
+2025-04-07 12:53:54,279 - INFO - Nurse inputs saved successfully for Patient ID P022.
+2025-04-07 12:53:54,280 - INFO - Nurse inputs saved successfully for Patient ID P023.
+2025-04-07 12:53:54,281 - INFO - Nurse inputs saved successfully for Patient ID P023.
+2025-04-07 12:53:54,281 - INFO - Nurse inputs saved successfully for Patient ID P023.
+2025-04-07 12:53:54,283 - INFO - Nurse inputs saved successfully for Patient ID P024.
+2025-04-07 12:53:54,283 - INFO - Nurse inputs saved successfully for Patient ID P024.
+2025-04-07 12:53:54,284 - INFO - Nurse inputs saved successfully for Patient ID P024.
+2025-04-07 12:53:54,285 - INFO - Nurse inputs saved successfully for Patient ID P025.
+2025-04-07 12:53:54,287 - INFO - Nurse inputs saved successfully for Patient ID P025.
+2025-04-07 12:53:54,287 - INFO - Nurse inputs saved successfully for Patient ID P025.
+2025-04-07 12:53:54,289 - INFO - Nurse inputs saved successfully for Patient ID P026.
+2025-04-07 12:53:54,289 - INFO - Nurse inputs saved successfully for Patient ID P026.
+2025-04-07 12:53:54,290 - INFO - Nurse inputs saved successfully for Patient ID P026.
+2025-04-07 12:53:54,291 - INFO - Nurse inputs saved successfully for Patient ID P027.
+2025-04-07 12:53:54,292 - INFO - Nurse inputs saved successfully for Patient ID P027.
+2025-04-07 12:53:54,292 - INFO - Nurse inputs saved successfully for Patient ID P027.
+2025-04-07 12:53:54,293 - INFO - Nurse inputs saved successfully for Patient ID P028.
+2025-04-07 12:53:54,294 - INFO - Nurse inputs saved successfully for Patient ID P028.
+2025-04-07 12:53:54,295 - INFO - Nurse inputs saved successfully for Patient ID P028.
+2025-04-07 12:53:54,296 - INFO - Nurse inputs saved successfully for Patient ID P029.
+2025-04-07 12:53:54,296 - INFO - Nurse inputs saved successfully for Patient ID P029.
+2025-04-07 12:53:54,297 - INFO - Nurse inputs saved successfully for Patient ID P029.
+2025-04-07 12:53:54,298 - INFO - Nurse inputs saved successfully for Patient ID P030.
+2025-04-07 12:53:54,299 - INFO - Nurse inputs saved successfully for Patient ID P030.
+2025-04-07 12:53:54,300 - INFO - Nurse inputs saved successfully for Patient ID P030.
+2025-04-07 12:53:54,301 - INFO - Nurse inputs saved successfully for Patient ID P031.
+2025-04-07 12:53:54,301 - INFO - Nurse inputs saved successfully for Patient ID P031.
+2025-04-07 12:53:54,302 - INFO - Nurse inputs saved successfully for Patient ID P031.
+2025-04-07 12:53:54,305 - INFO - Nurse inputs saved successfully for Patient ID P032.
+2025-04-07 12:53:54,306 - INFO - Nurse inputs saved successfully for Patient ID P032.
+2025-04-07 12:53:54,307 - INFO - Nurse inputs saved successfully for Patient ID P032.
+2025-04-07 12:53:54,309 - INFO - Nurse inputs saved successfully for Patient ID P033.
+2025-04-07 12:53:54,310 - INFO - Nurse inputs saved successfully for Patient ID P033.
+2025-04-07 12:53:54,311 - INFO - Nurse inputs saved successfully for Patient ID P033.
+2025-04-07 12:53:54,313 - INFO - Nurse inputs saved successfully for Patient ID P034.
+2025-04-07 12:53:54,314 - INFO - Nurse inputs saved successfully for Patient ID P034.
+2025-04-07 12:53:54,314 - INFO - Nurse inputs saved successfully for Patient ID P034.
+2025-04-07 12:53:54,315 - INFO - Nurse inputs saved successfully for Patient ID P035.
+2025-04-07 12:53:54,316 - INFO - Nurse inputs saved successfully for Patient ID P035.
+2025-04-07 12:53:54,317 - INFO - Nurse inputs saved successfully for Patient ID P035.
+2025-04-07 12:53:54,318 - INFO - Nurse inputs saved successfully for Patient ID P036.
+2025-04-07 12:53:54,319 - INFO - Nurse inputs saved successfully for Patient ID P036.
+2025-04-07 12:53:54,321 - INFO - Nurse inputs saved successfully for Patient ID P036.
+2025-04-07 12:53:54,322 - INFO - Nurse inputs saved successfully for Patient ID P037.
+2025-04-07 12:53:54,323 - INFO - Nurse inputs saved successfully for Patient ID P037.
+2025-04-07 12:53:54,323 - INFO - Nurse inputs saved successfully for Patient ID P037.
+2025-04-07 12:53:54,325 - INFO - Nurse inputs saved successfully for Patient ID P038.
+2025-04-07 12:53:54,325 - INFO - Nurse inputs saved successfully for Patient ID P038.
+2025-04-07 12:53:54,326 - INFO - Nurse inputs saved successfully for Patient ID P038.
+2025-04-07 12:53:54,327 - INFO - Nurse inputs saved successfully for Patient ID P039.
+2025-04-07 12:53:54,328 - INFO - Nurse inputs saved successfully for Patient ID P039.
+2025-04-07 12:53:54,328 - INFO - Nurse inputs saved successfully for Patient ID P039.
+2025-04-07 12:53:54,329 - INFO - Nurse inputs saved successfully for Patient ID P040.
+2025-04-07 12:53:54,330 - INFO - Nurse inputs saved successfully for Patient ID P040.
+2025-04-07 12:53:54,331 - INFO - Nurse inputs saved successfully for Patient ID P040.
+2025-04-07 12:53:54,332 - INFO - Nurse inputs saved successfully for Patient ID P041.
+2025-04-07 12:53:54,333 - INFO - Nurse inputs saved successfully for Patient ID P041.
+2025-04-07 12:53:54,334 - INFO - Nurse inputs saved successfully for Patient ID P041.
+2025-04-07 12:53:54,335 - INFO - Nurse inputs saved successfully for Patient ID P042.
+2025-04-07 12:53:54,337 - INFO - Nurse inputs saved successfully for Patient ID P042.
+2025-04-07 12:53:54,337 - INFO - Nurse inputs saved successfully for Patient ID P042.
+2025-04-07 12:53:54,339 - INFO - Nurse inputs saved successfully for Patient ID P043.
+2025-04-07 12:53:54,339 - INFO - Nurse inputs saved successfully for Patient ID P043.
+2025-04-07 12:53:54,340 - INFO - Nurse inputs saved successfully for Patient ID P043.
+2025-04-07 12:53:54,341 - INFO - Nurse inputs saved successfully for Patient ID P044.
+2025-04-07 12:53:54,342 - INFO - Nurse inputs saved successfully for Patient ID P044.
+2025-04-07 12:53:54,343 - INFO - Nurse inputs saved successfully for Patient ID P044.
+2025-04-07 12:53:54,344 - INFO - Nurse inputs saved successfully for Patient ID P045.
+2025-04-07 12:53:54,345 - INFO - Nurse inputs saved successfully for Patient ID P045.
+2025-04-07 12:53:54,346 - INFO - Nurse inputs saved successfully for Patient ID P045.
+2025-04-07 12:53:54,348 - INFO - Nurse inputs saved successfully for Patient ID P046.
+2025-04-07 12:53:54,349 - INFO - Nurse inputs saved successfully for Patient ID P046.
+2025-04-07 12:53:54,349 - INFO - Nurse inputs saved successfully for Patient ID P046.
+2025-04-07 12:53:54,351 - INFO - Nurse inputs saved successfully for Patient ID P047.
+2025-04-07 12:53:54,351 - INFO - Nurse inputs saved successfully for Patient ID P047.
+2025-04-07 12:53:54,352 - INFO - Nurse inputs saved successfully for Patient ID P047.
+2025-04-07 12:53:54,353 - INFO - Nurse inputs saved successfully for Patient ID P048.
+2025-04-07 12:53:54,354 - INFO - Nurse inputs saved successfully for Patient ID P048.
+2025-04-07 12:53:54,355 - INFO - Nurse inputs saved successfully for Patient ID P048.
+2025-04-07 12:53:54,356 - INFO - Nurse inputs saved successfully for Patient ID P049.
+2025-04-07 12:53:54,357 - INFO - Nurse inputs saved successfully for Patient ID P049.
+2025-04-07 12:53:54,358 - INFO - Nurse inputs saved successfully for Patient ID P049.
+2025-04-07 12:53:54,359 - INFO - Nurse inputs saved successfully for Patient ID P050.
+2025-04-07 12:53:54,360 - INFO - Nurse inputs saved successfully for Patient ID P050.
+2025-04-07 12:53:54,361 - INFO - Nurse inputs saved successfully for Patient ID P050.
+2025-04-07 12:53:54,361 - INFO - Generated/attempted 150 nurse notes.
+2025-04-07 12:53:54,361 - INFO - Updated config/config.yaml
+2025-04-07 12:53:54,361 - INFO - --- Simulation complete. ---

@@ -1,0 +1,407 @@
+2025-04-07 12:54:19,859 - root - INFO - Application started
+2025-04-07 12:54:23,015 - root - INFO - Application started
+2025-04-07 12:54:24,350 - root - INFO - Application started
+2025-04-07 12:54:25,286 - root - INFO - Application started
+2025-04-07 12:54:25,430 - root - INFO - Application started
+2025-04-07 12:54:25,443 - root - INFO - Running database initialization check...
+2025-04-07 12:54:25,444 - root - INFO - Initializing database...
+2025-04-07 12:54:25,462 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 12:54:25,463 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 12:54:25,464 - root - INFO - Table 'patients' checked/created.
+2025-04-07 12:54:25,464 - root - INFO - Database initialization complete.
+2025-04-07 12:54:25,464 - root - INFO - Database initialization check complete.
+2025-04-07 12:54:25,479 - root - INFO - CSS styles loaded.
+2025-04-07 12:54:25,523 - root - INFO - Data loaded successfully.
+2025-04-07 12:54:25,524 - root - INFO - Default patient set: P001
+2025-04-07 12:54:25,529 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 12:54:28,835 - root - INFO - Application started
+2025-04-07 12:54:28,842 - root - INFO - CSS styles loaded.
+2025-04-07 12:54:28,996 - root - INFO - Application started
+2025-04-07 12:54:29,005 - root - INFO - CSS styles loaded.
+2025-04-07 12:54:29,024 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 12:57:24,460 - root - INFO - Application started
+2025-04-07 12:57:28,399 - root - INFO - Application started
+2025-04-07 12:57:29,850 - root - INFO - Application started
+2025-04-07 12:57:43,541 - root - INFO - Application started
+2025-04-07 12:57:43,722 - root - INFO - Application started
+2025-04-07 12:57:43,785 - root - INFO - Running database initialization check...
+2025-04-07 12:57:43,787 - root - INFO - Initializing database...
+2025-04-07 12:57:43,815 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 12:57:43,816 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 12:57:43,816 - root - INFO - Table 'patients' checked/created.
+2025-04-07 12:57:43,816 - root - INFO - Database initialization complete.
+2025-04-07 12:57:43,816 - root - INFO - Database initialization check complete.
+2025-04-07 12:57:43,818 - root - INFO - CSS styles loaded.
+2025-04-07 12:57:43,880 - root - INFO - Data loaded successfully.
+2025-04-07 12:57:43,882 - root - INFO - Default patient set: P001
+2025-04-07 12:57:43,889 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 12:57:45,072 - root - INFO - Application started
+2025-04-07 12:57:45,076 - root - INFO - CSS styles loaded.
+2025-04-07 12:57:45,246 - root - INFO - Application started
+2025-04-07 12:57:45,253 - root - INFO - CSS styles loaded.
+2025-04-07 12:57:45,279 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 12:57:47,302 - root - INFO - Application started
+2025-04-07 12:57:47,308 - root - INFO - CSS styles loaded.
+2025-04-07 12:57:47,451 - root - INFO - Application started
+2025-04-07 12:57:47,462 - root - INFO - CSS styles loaded.
+2025-04-07 12:57:47,476 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 12:59:00,620 - root - INFO - Application started
+2025-04-07 12:59:00,625 - root - INFO - CSS styles loaded.
+2025-04-07 12:59:00,935 - root - INFO - Application started
+2025-04-07 12:59:00,937 - root - INFO - CSS styles loaded.
+2025-04-07 12:59:00,940 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 12:59:03,492 - root - INFO - Application started
+2025-04-07 12:59:03,499 - root - INFO - CSS styles loaded.
+2025-04-07 12:59:03,655 - root - INFO - Application started
+2025-04-07 12:59:03,658 - root - INFO - CSS styles loaded.
+2025-04-07 12:59:03,692 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:00:23,530 - root - INFO - Application started
+2025-04-07 13:00:25,798 - root - INFO - Application started
+2025-04-07 13:00:28,771 - root - INFO - Application started
+2025-04-07 13:00:28,928 - root - INFO - Application started
+2025-04-07 13:00:29,006 - root - INFO - Application started
+2025-04-07 13:00:29,026 - root - INFO - Running database initialization check...
+2025-04-07 13:00:29,026 - root - INFO - Initializing database...
+2025-04-07 13:00:29,030 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:00:29,031 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:00:29,031 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:00:29,031 - root - INFO - Database initialization complete.
+2025-04-07 13:00:29,031 - root - INFO - Database initialization check complete.
+2025-04-07 13:00:29,033 - root - INFO - CSS styles loaded.
+2025-04-07 13:00:29,112 - root - INFO - Data loaded successfully.
+2025-04-07 13:00:29,112 - root - INFO - Default patient set: P001
+2025-04-07 13:00:29,117 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:00:31,997 - root - INFO - Application started
+2025-04-07 13:00:32,004 - root - INFO - CSS styles loaded.
+2025-04-07 13:00:32,094 - root - INFO - Application started
+2025-04-07 13:00:32,111 - root - INFO - CSS styles loaded.
+2025-04-07 13:00:32,117 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:00:33,145 - root - INFO - Application started
+2025-04-07 13:00:33,163 - root - INFO - CSS styles loaded.
+2025-04-07 13:00:33,242 - root - INFO - Application started
+2025-04-07 13:00:33,245 - root - INFO - CSS styles loaded.
+2025-04-07 13:00:33,247 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:01:22,083 - root - INFO - Application started
+2025-04-07 13:01:22,103 - root - INFO - CSS styles loaded.
+2025-04-07 13:01:22,375 - root - INFO - Application started
+2025-04-07 13:01:22,378 - root - INFO - CSS styles loaded.
+2025-04-07 13:01:22,381 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:01:58,538 - root - INFO - Application started
+2025-04-07 13:01:58,549 - root - INFO - CSS styles loaded.
+2025-04-07 13:01:58,759 - root - INFO - Application started
+2025-04-07 13:01:58,762 - root - INFO - CSS styles loaded.
+2025-04-07 13:01:58,765 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:10:00,385 - root - INFO - Application started
+2025-04-07 13:10:02,485 - root - INFO - Application started
+2025-04-07 13:10:05,299 - root - INFO - Application started
+2025-04-07 13:10:05,670 - root - INFO - Application started
+2025-04-07 13:10:05,728 - root - INFO - Application started
+2025-04-07 13:10:05,741 - root - INFO - Running database initialization check...
+2025-04-07 13:10:05,741 - root - INFO - Initializing database...
+2025-04-07 13:10:05,758 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:10:05,760 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:10:05,760 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:10:05,760 - root - INFO - Database initialization complete.
+2025-04-07 13:10:05,760 - root - INFO - Database initialization check complete.
+2025-04-07 13:10:05,764 - root - INFO - CSS styles loaded.
+2025-04-07 13:10:05,816 - root - INFO - Data loaded successfully.
+2025-04-07 13:10:05,817 - root - INFO - Default patient set: P001
+2025-04-07 13:10:05,821 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:10:07,626 - root - INFO - Application started
+2025-04-07 13:10:07,632 - root - INFO - CSS styles loaded.
+2025-04-07 13:10:07,638 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:10:07,748 - root - INFO - Application started
+2025-04-07 13:10:07,758 - root - INFO - CSS styles loaded.
+2025-04-07 13:10:07,770 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:10:08,235 - root - WARNING - No side effect data found for patient P001 in database or CSV.
+2025-04-07 13:10:08,830 - root - INFO - Application started
+2025-04-07 13:10:08,835 - root - INFO - CSS styles loaded.
+2025-04-07 13:10:08,915 - root - INFO - Application started
+2025-04-07 13:10:08,918 - root - INFO - CSS styles loaded.
+2025-04-07 13:10:08,920 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:10:09,113 - root - WARNING - No side effect data found for patient P001 in database or CSV.
+2025-04-07 13:10:15,186 - root - INFO - Application started
+2025-04-07 13:10:15,196 - root - INFO - CSS styles loaded.
+2025-04-07 13:10:15,400 - root - INFO - Application started
+2025-04-07 13:10:15,427 - root - INFO - CSS styles loaded.
+2025-04-07 13:10:15,430 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:12:14,434 - root - INFO - Application started
+2025-04-07 13:12:16,442 - root - INFO - Application started
+2025-04-07 13:12:18,078 - root - INFO - Application started
+2025-04-07 13:12:19,286 - root - INFO - Application started
+2025-04-07 13:12:19,411 - root - INFO - Application started
+2025-04-07 13:12:19,423 - root - INFO - Running database initialization check...
+2025-04-07 13:12:19,424 - root - INFO - Initializing database...
+2025-04-07 13:12:19,435 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:12:19,436 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:12:19,436 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:12:19,436 - root - INFO - Database initialization complete.
+2025-04-07 13:12:19,440 - root - INFO - Database initialization check complete.
+2025-04-07 13:12:19,447 - root - INFO - CSS styles loaded.
+2025-04-07 13:12:19,509 - root - INFO - Data loaded successfully.
+2025-04-07 13:12:19,509 - root - INFO - Default patient set: P001
+2025-04-07 13:12:19,513 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:12:20,687 - root - INFO - Application started
+2025-04-07 13:12:20,693 - root - INFO - CSS styles loaded.
+2025-04-07 13:12:20,827 - root - INFO - Application started
+2025-04-07 13:12:20,835 - root - INFO - CSS styles loaded.
+2025-04-07 13:12:20,871 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:12:22,283 - root - INFO - Application started
+2025-04-07 13:12:22,291 - root - INFO - CSS styles loaded.
+2025-04-07 13:12:22,298 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:12:22,395 - root - INFO - Application started
+2025-04-07 13:12:22,405 - root - INFO - CSS styles loaded.
+2025-04-07 13:12:22,417 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:12:22,845 - root - WARNING - No side effect data found for patient P001 in database or CSV
+2025-04-07 13:15:20,786 - root - INFO - Application started
+2025-04-07 13:15:23,643 - root - INFO - Application started
+2025-04-07 13:15:25,350 - root - INFO - Application started
+2025-04-07 13:15:26,169 - root - INFO - Application started
+2025-04-07 13:15:26,232 - root - INFO - Application started
+2025-04-07 13:15:26,255 - root - INFO - Running database initialization check...
+2025-04-07 13:15:26,255 - root - INFO - Initializing database...
+2025-04-07 13:15:26,261 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:15:26,262 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:15:26,262 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:15:26,262 - root - INFO - Database initialization complete.
+2025-04-07 13:15:26,262 - root - INFO - Database initialization check complete.
+2025-04-07 13:15:26,263 - root - INFO - CSS styles loaded.
+2025-04-07 13:15:26,335 - root - INFO - Data loaded successfully.
+2025-04-07 13:15:26,335 - root - INFO - Default patient set: P001
+2025-04-07 13:15:26,339 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:15:27,473 - root - INFO - Application started
+2025-04-07 13:15:27,481 - root - INFO - CSS styles loaded.
+2025-04-07 13:15:27,589 - root - INFO - Application started
+2025-04-07 13:15:27,600 - root - INFO - CSS styles loaded.
+2025-04-07 13:15:27,610 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:15:34,745 - root - INFO - Application started
+2025-04-07 13:15:34,749 - root - INFO - CSS styles loaded.
+2025-04-07 13:15:34,999 - root - INFO - Application started
+2025-04-07 13:15:35,002 - root - INFO - CSS styles loaded.
+2025-04-07 13:15:35,006 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:15:35,471 - root - WARNING - No side effect data found for patient P001 in database or CSV
+2025-04-07 13:15:43,258 - root - INFO - Application started
+2025-04-07 13:15:43,266 - root - INFO - CSS styles loaded.
+2025-04-07 13:15:43,446 - root - INFO - Application started
+2025-04-07 13:15:43,448 - root - INFO - CSS styles loaded.
+2025-04-07 13:15:43,451 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:22:40,560 - root - INFO - Application started
+2025-04-07 13:22:42,428 - root - INFO - Application started
+2025-04-07 13:22:43,928 - root - INFO - Application started
+2025-04-07 13:22:44,804 - root - INFO - Application started
+2025-04-07 13:22:44,869 - root - INFO - Application started
+2025-04-07 13:22:44,882 - root - INFO - Running database initialization check...
+2025-04-07 13:22:44,883 - root - INFO - Initializing database...
+2025-04-07 13:22:44,893 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:22:44,894 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:22:44,894 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:22:44,894 - root - INFO - Database initialization complete.
+2025-04-07 13:22:44,894 - root - INFO - Database initialization check complete.
+2025-04-07 13:22:44,896 - root - INFO - CSS styles loaded.
+2025-04-07 13:22:44,987 - root - INFO - Data loaded successfully.
+2025-04-07 13:22:44,988 - root - INFO - Default patient set: P001
+2025-04-07 13:22:44,993 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:22:46,655 - root - INFO - Application started
+2025-04-07 13:22:46,664 - root - INFO - CSS styles loaded.
+2025-04-07 13:22:46,672 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:22:46,753 - root - INFO - Application started
+2025-04-07 13:22:46,755 - root - INFO - CSS styles loaded.
+2025-04-07 13:22:46,774 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:22:47,218 - root - WARNING - No side effect data found for patient P001 in database or CSV
+2025-04-07 13:22:58,555 - root - INFO - Application started
+2025-04-07 13:22:58,587 - root - INFO - CSS styles loaded.
+2025-04-07 13:22:58,818 - root - INFO - Application started
+2025-04-07 13:22:58,822 - root - INFO - CSS styles loaded.
+2025-04-07 13:22:58,875 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:22:58,880 - root - WARNING - No side effect data found for patient P001 in database or CSV
+2025-04-07 13:23:07,322 - root - INFO - Application started
+2025-04-07 13:23:07,330 - root - INFO - CSS styles loaded.
+2025-04-07 13:23:07,337 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:23:07,359 - root - WARNING - No side effect data found for patient P001 in database or CSV
+2025-04-07 13:23:07,395 - root - INFO - Side effect report saved successfully to database for Patient ID P001.
+2025-04-07 13:23:07,484 - root - INFO - Side effect report saved successfully to CSV for Patient ID P001.
+2025-04-07 13:23:07,662 - root - INFO - Application started
+2025-04-07 13:23:07,666 - root - INFO - CSS styles loaded.
+2025-04-07 13:23:07,673 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:23:07,678 - root - INFO - Retrieved 1 side effect records from database for patient P001
+2025-04-07 13:23:07,682 - root - INFO - Fetched 1 side effect records from CSV for P001
+2025-04-07 13:23:07,686 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:23:11,085 - root - INFO - Application started
+2025-04-07 13:23:11,100 - root - INFO - CSS styles loaded.
+2025-04-07 13:23:11,353 - root - INFO - Application started
+2025-04-07 13:23:11,364 - root - INFO - CSS styles loaded.
+2025-04-07 13:23:11,385 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:23:11,390 - root - INFO - Retrieved 1 side effect records from database for patient P001
+2025-04-07 13:23:11,392 - root - INFO - Fetched 1 side effect records from CSV for P001
+2025-04-07 13:23:11,393 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:23:13,917 - root - INFO - Application started
+2025-04-07 13:23:13,926 - root - INFO - CSS styles loaded.
+2025-04-07 13:23:14,145 - root - INFO - Application started
+2025-04-07 13:23:14,151 - root - INFO - CSS styles loaded.
+2025-04-07 13:23:14,163 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:23:14,381 - root - INFO - Retrieved 1 side effect records from database for patient P001
+2025-04-07 13:23:14,384 - root - INFO - Fetched 1 side effect records from CSV for P001
+2025-04-07 13:23:14,385 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:28:36,408 - root - INFO - Application started
+2025-04-07 13:28:38,092 - root - INFO - Application started
+2025-04-07 13:28:40,426 - root - INFO - Application started
+2025-04-07 13:28:40,547 - root - INFO - Application started
+2025-04-07 13:28:40,607 - root - INFO - Application started
+2025-04-07 13:28:40,611 - root - INFO - Running database initialization check...
+2025-04-07 13:28:40,611 - root - INFO - Initializing database...
+2025-04-07 13:28:40,618 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:28:40,619 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:28:40,619 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:28:40,619 - root - INFO - Database initialization complete.
+2025-04-07 13:28:40,620 - root - INFO - Database initialization check complete.
+2025-04-07 13:28:40,622 - root - INFO - CSS styles loaded.
+2025-04-07 13:28:40,683 - root - INFO - Data loaded successfully.
+2025-04-07 13:28:40,683 - root - INFO - Default patient set: P001
+2025-04-07 13:28:40,700 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:28:42,038 - root - INFO - Application started
+2025-04-07 13:28:42,045 - root - INFO - CSS styles loaded.
+2025-04-07 13:28:42,116 - root - INFO - Application started
+2025-04-07 13:28:42,119 - root - INFO - CSS styles loaded.
+2025-04-07 13:28:42,124 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:28:43,611 - root - INFO - Application started
+2025-04-07 13:28:43,616 - root - INFO - CSS styles loaded.
+2025-04-07 13:28:43,623 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:28:43,721 - root - INFO - Application started
+2025-04-07 13:28:43,726 - root - INFO - CSS styles loaded.
+2025-04-07 13:28:43,738 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:28:44,160 - root - INFO - Retrieved 1 side effect records from database for patient P001
+2025-04-07 13:28:44,162 - root - INFO - Fetched 1 side effect records from CSV for P001
+2025-04-07 13:28:44,163 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:28:51,897 - root - INFO - Application started
+2025-04-07 13:28:51,906 - root - INFO - CSS styles loaded.
+2025-04-07 13:28:52,125 - root - INFO - Application started
+2025-04-07 13:28:52,129 - root - INFO - CSS styles loaded.
+2025-04-07 13:28:52,139 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:28:52,165 - root - INFO - Retrieved 1 side effect records from database for patient P001
+2025-04-07 13:28:52,168 - root - INFO - Fetched 1 side effect records from CSV for P001
+2025-04-07 13:28:52,171 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:29:03,595 - root - INFO - Application started
+2025-04-07 13:29:03,605 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:03,615 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:29:03,641 - root - INFO - Retrieved 1 side effect records from database for patient P001
+2025-04-07 13:29:03,725 - root - INFO - Fetched 1 side effect records from CSV for P001
+2025-04-07 13:29:03,777 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:29:03,793 - root - INFO - Side effect report saved successfully to database for Patient ID P001.
+2025-04-07 13:29:03,808 - root - INFO - Side effect report saved successfully to CSV for Patient ID P001.
+2025-04-07 13:29:03,915 - root - INFO - Application started
+2025-04-07 13:29:03,918 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:03,921 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:29:03,925 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:29:03,928 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:29:03,929 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:29:07,205 - root - INFO - Application started
+2025-04-07 13:29:07,215 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:07,438 - root - INFO - Application started
+2025-04-07 13:29:07,442 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:07,456 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:29:07,662 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:29:07,665 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:29:07,668 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:29:07,931 - root - INFO - Application started
+2025-04-07 13:29:07,934 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:07,994 - root - INFO - Application started
+2025-04-07 13:29:07,997 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:07,999 - root - INFO - Routing to page: Parcours Patient
+2025-04-07 13:29:08,007 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:29:08,009 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:29:08,010 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:29:08,595 - root - INFO - Application started
+2025-04-07 13:29:08,598 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:08,753 - root - INFO - Application started
+2025-04-07 13:29:08,761 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:08,776 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:29:08,977 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:29:08,979 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:29:08,980 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:29:54,472 - root - INFO - Application started
+2025-04-07 13:29:56,906 - root - INFO - Application started
+2025-04-07 13:29:59,041 - root - INFO - Application started
+2025-04-07 13:29:59,124 - root - INFO - Application started
+2025-04-07 13:29:59,182 - root - INFO - Application started
+2025-04-07 13:29:59,186 - root - INFO - Running database initialization check...
+2025-04-07 13:29:59,186 - root - INFO - Initializing database...
+2025-04-07 13:29:59,192 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:29:59,193 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:29:59,193 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:29:59,193 - root - INFO - Database initialization complete.
+2025-04-07 13:29:59,194 - root - INFO - Database initialization check complete.
+2025-04-07 13:29:59,207 - root - INFO - CSS styles loaded.
+2025-04-07 13:29:59,284 - root - INFO - Data loaded successfully.
+2025-04-07 13:29:59,284 - root - INFO - Default patient set: P001
+2025-04-07 13:29:59,292 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:30:01,053 - root - INFO - Application started
+2025-04-07 13:30:01,058 - root - INFO - CSS styles loaded.
+2025-04-07 13:30:01,205 - root - INFO - Application started
+2025-04-07 13:30:01,214 - root - INFO - CSS styles loaded.
+2025-04-07 13:30:01,231 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:30:02,390 - root - INFO - Application started
+2025-04-07 13:30:02,396 - root - INFO - CSS styles loaded.
+2025-04-07 13:30:02,404 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:30:02,492 - root - INFO - Application started
+2025-04-07 13:30:02,505 - root - INFO - CSS styles loaded.
+2025-04-07 13:30:02,508 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:30:02,918 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:30:02,921 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:30:02,922 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:30:51,429 - root - INFO - Application started
+2025-04-07 13:30:54,725 - root - INFO - Application started
+2025-04-07 13:30:56,506 - root - INFO - Application started
+2025-04-07 13:30:56,589 - root - INFO - Application started
+2025-04-07 13:30:56,648 - root - INFO - Application started
+2025-04-07 13:30:56,659 - root - INFO - Running database initialization check...
+2025-04-07 13:30:56,660 - root - INFO - Initializing database...
+2025-04-07 13:30:56,671 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 13:30:56,672 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 13:30:56,673 - root - INFO - Table 'patients' checked/created.
+2025-04-07 13:30:56,673 - root - INFO - Database initialization complete.
+2025-04-07 13:30:56,674 - root - INFO - Database initialization check complete.
+2025-04-07 13:30:56,685 - root - INFO - CSS styles loaded.
+2025-04-07 13:30:56,717 - root - INFO - Data loaded successfully.
+2025-04-07 13:30:56,718 - root - INFO - Default patient set: P001
+2025-04-07 13:30:56,729 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:30:59,179 - root - INFO - Application started
+2025-04-07 13:30:59,189 - root - INFO - CSS styles loaded.
+2025-04-07 13:30:59,317 - root - INFO - Application started
+2025-04-07 13:30:59,328 - root - INFO - CSS styles loaded.
+2025-04-07 13:30:59,339 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:31:00,344 - root - INFO - Application started
+2025-04-07 13:31:00,353 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:00,359 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 13:31:00,439 - root - INFO - Application started
+2025-04-07 13:31:00,454 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:00,463 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 13:31:00,864 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:31:00,866 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:31:00,867 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:31:11,291 - root - INFO - Application started
+2025-04-07 13:31:11,299 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:11,543 - root - INFO - Application started
+2025-04-07 13:31:11,546 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:11,549 - root - INFO - Routing to page: Plan de Soins et Entrées Infirmières
+2025-04-07 13:31:12,350 - root - INFO - Application started
+2025-04-07 13:31:12,354 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:12,442 - root - INFO - Application started
+2025-04-07 13:31:12,466 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:12,482 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:31:12,488 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:31:12,490 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:31:12,491 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:31:19,611 - root - INFO - Application started
+2025-04-07 13:31:19,617 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:19,630 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:31:19,645 - root - INFO - Retrieved 2 side effect records from database for patient P001
+2025-04-07 13:31:19,648 - root - INFO - Fetched 2 side effect records from CSV for P001
+2025-04-07 13:31:19,650 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 13:31:19,800 - root - INFO - Side effect report saved successfully to database for Patient ID P001.
+2025-04-07 13:31:19,807 - root - INFO - Side effect report saved successfully to CSV for Patient ID P001.
+2025-04-07 13:31:19,892 - root - INFO - Application started
+2025-04-07 13:31:19,895 - root - INFO - CSS styles loaded.
+2025-04-07 13:31:19,898 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-07 13:31:19,900 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-07 13:31:19,902 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-07 13:31:19,904 - root - INFO - Found side effect data in both database and CSV for P001, using database data
