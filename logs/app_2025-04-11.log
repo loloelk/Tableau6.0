@@ -2738,3 +2738,39 @@ ImportError: cannot import name 'preprocess_features' from 'services.ml_service'
 2025-04-11 22:27:56,786 - ml_service - INFO - Generating evaluation cohort of size 50
 2025-04-11 22:27:56,809 - ml_service - ERROR - Column 'is_responder' missing in dataset
 2025-04-11 22:27:56,809 - ml_service - ERROR - Column 'is_responder' missing in dataset
+2025-04-11 22:35:39,990 - root - INFO - Application started
+2025-04-11 22:35:42,065 - root - INFO - Application started
+2025-04-11 22:35:44,564 - root - INFO - Application started
+2025-04-11 22:35:44,689 - root - INFO - Application started
+2025-04-11 22:35:44,744 - root - INFO - Application started
+2025-04-11 22:35:44,748 - root - INFO - Running database initialization check...
+2025-04-11 22:35:44,748 - root - INFO - Initializing database...
+2025-04-11 22:35:44,754 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-11 22:35:44,755 - root - INFO - Table 'side_effects' checked/created.
+2025-04-11 22:35:44,755 - root - INFO - Table 'patients' checked/created.
+2025-04-11 22:35:44,755 - root - INFO - Database initialization complete.
+2025-04-11 22:35:44,756 - root - INFO - Database initialization check complete.
+2025-04-11 22:35:44,758 - root - INFO - CSS styles loaded.
+2025-04-11 22:35:44,930 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-11 22:35:44,930 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-11 22:35:44,931 - root - INFO - Data loaded successfully.
+2025-04-11 22:35:44,931 - root - INFO - Default patient set: P001
+2025-04-11 22:35:44,935 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-11 22:35:47,649 - root - INFO - Application started
+2025-04-11 22:35:47,658 - root - INFO - CSS styles loaded.
+2025-04-11 22:35:47,739 - root - INFO - Application started
+2025-04-11 22:35:47,761 - root - INFO - CSS styles loaded.
+2025-04-11 22:35:47,765 - root - INFO - Routing to page: Performance ML
+2025-04-11 22:35:47,801 - ml_service - INFO - Generating evaluation cohort of size 50
+2025-04-11 22:35:47,801 - ml_service - INFO - Generating evaluation cohort of size 50
+2025-04-11 22:35:47,837 - ml_service - ERROR - Column 'is_responder' missing in dataset
+2025-04-11 22:35:47,837 - ml_service - ERROR - Column 'is_responder' missing in dataset
+2025-04-11 22:35:48,291 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 355, in ml_performance_page
+    from services.ml_service import preprocess_features, create_response_labels
+ImportError: cannot import name 'preprocess_features' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-11 22:35:48,605 - ml_service - INFO - Generating evaluation cohort of size 50
+2025-04-11 22:35:48,605 - ml_service - INFO - Generating evaluation cohort of size 50
+2025-04-11 22:35:48,622 - ml_service - ERROR - Column 'is_responder' missing in dataset
+2025-04-11 22:35:48,622 - ml_service - ERROR - Column 'is_responder' missing in dataset
