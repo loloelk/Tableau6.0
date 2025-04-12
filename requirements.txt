@@ -8,3 +8,5 @@ statsmodels
 seaborn
 python-dotenv
 matplotlib
+scikit-learn
+joblib

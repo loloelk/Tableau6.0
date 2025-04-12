@@ -620,3 +620,401 @@ mappings:
     logging.info("--- Simulation complete. ---")
     print("\nSim complete. Run app: 'streamlit run app.py'")
     print(f"Log: {log_file}")
+
+"""
+Enhanced script to generate realistic synthetic patient data for neuromodulation treatment response
+Focuses on creating a balanced dataset with realistic correlations between features and outcomes
+"""
+
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+import joblib
+import os
+from datetime import datetime, timedelta
+import logging
+import sqlite3
+import yaml
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(f'logs/simulation_{datetime.now().strftime("%Y-%m-%d_%H%M%S")}.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Constants for data generation
+N_PATIENTS = 500  # Total number of patients to simulate
+RESPONSE_RATE = 0.45  # Target response rate (45%)
+FEATURE_CORRELATIONS = {
+    'age': -0.2,  # Younger patients respond slightly better
+    'madrs_score_bl': -0.15,  # Lower baseline severity has better response
+    'bfi_neuroticism_bl': -0.25,  # Lower neuroticism has better response
+    'bfi_extraversion_bl': 0.15,  # Higher extraversion has better response
+    'bai_score_bl': -0.1,  # Lower anxiety has better response
+    'shaps_score_bl': -0.2  # Lower anhedonia has better response
+}
+
+def load_config():
+    """Load configuration from YAML file"""
+    config_path = os.path.join(os.path.dirname(__file__), 'config', 'config.yaml')
+    try:
+        with open(config_path, 'r') as file:
+            config = yaml.safe_load(file)
+        return config
+    except Exception as e:
+        logger.error(f"Error loading config: {str(e)}")
+        return {}
+
+def create_synthetic_patients(n_patients=N_PATIENTS, seed=42):
+    """
+    Generate synthetic patient data with realistic distributions and correlations
+    
+    Returns:
+        DataFrame with synthetic patient data including baseline and outcome measures
+    """
+    np.random.seed(seed)
+    patients = {}
+    
+    # Generate patient IDs
+    patients['patient_id'] = [f"P{i:04d}" for i in range(1, n_patients + 1)]
+    
+    # Demographics
+    patients['age'] = np.random.normal(48, 14, n_patients).clip(18, 80).round().astype(int)
+    patients['sexe'] = np.random.choice(['F', 'M'], size=n_patients, p=[0.6, 0.4])
+    
+    # Baseline clinical measures with realistic ranges
+    patients['madrs_score_bl'] = np.random.normal(30, 5, n_patients).clip(15, 45).round().astype(int)
+    patients['bdi_score_bl'] = np.random.normal(25, 8, n_patients).clip(0, 63).round().astype(int)
+    patients['bai_score_bl'] = np.random.normal(20, 10, n_patients).clip(0, 63).round().astype(int)
+    patients['pss_score_bl'] = np.random.normal(25, 7, n_patients).clip(0, 40).round().astype(int)
+    patients['shaps_score_bl'] = np.random.normal(7, 3, n_patients).clip(0, 14).round().astype(int)
+    
+    # Personality measures
+    patients['bfi_extraversion_bl'] = np.random.normal(2.7, 0.9, n_patients).clip(1, 5).round(1)
+    patients['bfi_agreeableness_bl'] = np.random.normal(3.5, 0.7, n_patients).clip(1, 5).round(1)
+    patients['bfi_conscientiousness_bl'] = np.random.normal(3.3, 0.8, n_patients).clip(1, 5).round(1)
+    patients['bfi_neuroticism_bl'] = np.random.normal(3.8, 0.8, n_patients).clip(1, 5).round(1)
+    patients['bfi_openness_bl'] = np.random.normal(3.4, 0.9, n_patients).clip(1, 5).round(1)
+    
+    # Generate latent response tendency based on features that predict response
+    # Scale correlations to create a weighted sum
+    correlation_sum = sum(abs(val) for val in FEATURE_CORRELATIONS.values())
+    latent_response = np.zeros(n_patients)
+    
+    # Adjust features for correlations and build latent response variable
+    for feat_name, correlation in FEATURE_CORRELATIONS.items():
+        if feat_name in patients:
+            # Get feature values
+            feat_vals = patients[feat_name]
+            
+            # Normalize to 0-1 range
+            if isinstance(feat_vals[0], str):  # Skip string features
+                continue
+                
+            feat_min, feat_max = min(feat_vals), max(feat_vals)
+            feat_range = feat_max - feat_min
+            if feat_range == 0:  # Avoid division by zero
+                continue
+                
+            # Normalize feature
+            norm_feat = (feat_vals - feat_min) / feat_range
+            
+            # Add weighted normalized feature to latent response
+            # Invert if negative correlation
+            if correlation < 0:
+                norm_feat = 1 - norm_feat
+                
+            weight = abs(correlation) / correlation_sum
+            latent_response += weight * norm_feat
+    
+    # Add random noise to latent response
+    latent_response = 0.7 * latent_response + 0.3 * np.random.random(n_patients)
+    
+    # Get threshold for desired response rate
+    threshold = np.percentile(latent_response, 100 * (1 - RESPONSE_RATE))
+    
+    # Create response flag
+    patients['is_responder'] = (latent_response >= threshold).astype(int)
+    
+    # Generate outcome scores based on response status
+    for patient_idx in range(n_patients):
+        is_resp = patients['is_responder'][patient_idx]
+        
+        # MADRS score reduction (50-80% for responders, 10-40% for non-responders)
+        if is_resp:
+            reduction_pct = np.random.uniform(0.5, 0.8)
+        else:
+            reduction_pct = np.random.uniform(0.1, 0.4)
+            
+        # Calculate follow-up MADRS score
+        bl_score = patients['madrs_score_bl'][patient_idx]
+        fu_score = round(bl_score * (1 - reduction_pct))
+        patients['madrs_score_fu'] = patients.get('madrs_score_fu', []) + [fu_score]
+        
+        # Calculate other follow-up scores with some correlation to MADRS improvement
+        for measure in ['bdi', 'bai', 'pss', 'shaps']:
+            bl_key = f"{measure}_score_bl"
+            if bl_key in patients:
+                bl_val = patients[bl_key][patient_idx]
+                # Add some noise to the reduction percentage
+                measure_pct = reduction_pct * np.random.uniform(0.8, 1.2)
+                measure_pct = min(max(measure_pct, 0), 0.9)  # Keep within reasonable bounds
+                fu_val = round(bl_val * (1 - measure_pct))
+                fu_key = f"{measure}_score_fu"
+                patients[fu_key] = patients.get(fu_key, []) + [fu_val]
+    
+    # Add protocol assignment (balanced between responders/non-responders)
+    protocols = ['rTMS-Standard', 'rTMS-Accelerated', 'tDCS-Standard', 'tDCS-HD']
+    responder_protocols = np.random.choice(protocols, size=sum(patients['is_responder']), replace=True)
+    non_responder_protocols = np.random.choice(protocols, size=n_patients - sum(patients['is_responder']), replace=True)
+    
+    # Combine protocols
+    resp_idx = 0
+    non_resp_idx = 0
+    all_protocols = []
+    for is_resp in patients['is_responder']:
+        if is_resp:
+            all_protocols.append(responder_protocols[resp_idx])
+            resp_idx += 1
+        else:
+            all_protocols.append(non_responder_protocols[non_resp_idx])
+            non_resp_idx += 1
+    
+    patients['protocol'] = all_protocols
+    
+    # Add side effect data
+    side_effect_types = ['Headache', 'Fatigue', 'Dizziness', 'Nausea', 'None']
+    side_effect_probs = {'rTMS-Standard': [0.3, 0.2, 0.1, 0.05, 0.35],
+                        'rTMS-Accelerated': [0.35, 0.25, 0.15, 0.1, 0.15],
+                        'tDCS-Standard': [0.15, 0.1, 0.1, 0.05, 0.6],
+                        'tDCS-HD': [0.2, 0.15, 0.1, 0.05, 0.5]}
+    
+    # Assign side effects based on protocol
+    patients['side_effect'] = [np.random.choice(side_effect_types, p=side_effect_probs[protocol]) 
+                             for protocol in patients['protocol']]
+    patients['side_effect_severity'] = [np.random.randint(1, 5) if effect != 'None' else 0 
+                                      for effect in patients['side_effect']]
+    
+    # Convert to DataFrame
+    df = pd.DataFrame(patients)
+    
+    # Add explicit response label based on MADRS reduction as a double-check
+    df['madrs_improvement_pct'] = 100 * (df['madrs_score_bl'] - df['madrs_score_fu']) / df['madrs_score_bl']
+    df['madrs_response'] = (df['madrs_improvement_pct'] >= 50).astype(int)
+    
+    # Make sure response labels match (for consistency)
+    mismatch = sum(df['is_responder'] != df['madrs_response'])
+    if mismatch > 0:
+        logger.warning(f"Found {mismatch} patients with inconsistent response labels. Fixing...")
+        df['is_responder'] = df['madrs_response']
+    
+    logger.info(f"Generated synthetic data for {n_patients} patients with {df['is_responder'].sum()} responders "
+               f"({df['is_responder'].mean()*100:.1f}% response rate)")
+    
+    # Add dates (treatments started between 90 days ago and 30 days ago)
+    today = datetime.now()
+    start_dates = [today - timedelta(days=np.random.randint(30, 90)) for _ in range(n_patients)]
+    df['treatment_start_date'] = start_dates
+    
+    # Add treatment end dates (treatments last 2-6 weeks)
+    df['treatment_end_date'] = [start_date + timedelta(days=np.random.randint(14, 42)) 
+                             for start_date in df['treatment_start_date']]
+    
+    return df
+
+def save_dataset(df, filename, to_db=True):
+    """
+    Save the dataset to CSV and optionally to a SQLite database
+    
+    Args:
+        df: DataFrame to save
+        filename: Filename to save as
+        to_db: Whether to also save to the database
+    """
+    # Save to CSV
+    filepath = os.path.join(os.path.dirname(__file__), 'data', filename)
+    df.to_csv(filepath, index=False)
+    logger.info(f"Saved dataset to {filepath}")
+    
+    # Optionally save to database
+    if to_db:
+        db_path = os.path.join(os.path.dirname(__file__), 'data', 'dashboard_data.db')
+        conn = sqlite3.connect(db_path)
+        
+        # Determine table name from filename
+        table_name = filename.split('.')[0]
+        
+        # Save to database
+        df.to_sql(table_name, conn, if_exists='replace', index=False)
+        logger.info(f"Saved data to database table: {table_name}")
+        conn.close()
+
+def generate_datasets():
+    """Generate and save all required synthetic datasets"""
+    # Load configuration
+    config = load_config()
+    n_patients = config.get('simulation', {}).get('n_patients', N_PATIENTS)
+    
+    # Create main patient dataset
+    df_patients = create_synthetic_patients(n_patients=n_patients)
+    
+    # Save basic patient data
+    basic_cols = ['patient_id', 'age', 'sexe', 'madrs_score_bl', 'madrs_score_fu',
+                 'bdi_score_bl', 'bdi_score_fu', 'protocol', 'treatment_start_date',
+                 'treatment_end_date', 'is_responder', 'madrs_improvement_pct']
+    df_basic = df_patients[basic_cols].copy()
+    save_dataset(df_basic, 'patient_data_simulated.csv')
+    
+    # Save patient data with protocol information
+    protocol_cols = basic_cols + ['side_effect', 'side_effect_severity']
+    df_protocol = df_patients[protocol_cols].copy()
+    save_dataset(df_protocol, 'patient_data_with_protocol_simulated.csv')
+    
+    # Save extended patient data for ML
+    save_dataset(df_patients, 'extended_patient_data.csv')
+    
+    # Create a version with additional features for ML
+    df_ml = df_patients.copy()
+    
+    # Add dummy genetic markers (SNPs)
+    snp_names = ['rs6311', 'rs6313', 'rs1799913', 'rs1108580']
+    for snp in snp_names:
+        # Generate random genotypes with minor allele frequency around 30%
+        df_ml[snp] = np.random.choice(['AA', 'AG', 'GG'], size=len(df_ml), p=[0.09, 0.42, 0.49])
+    
+    # Add dummy brain connectivity features
+    networks = ['DMN', 'FPN', 'SN', 'VAN', 'DAN']
+    for i, network1 in enumerate(networks):
+        for network2 in networks[i:]:
+            if network1 != network2:
+                # Generate connectivity values between -0.5 and 0.9
+                col_name = f"connectivity_{network1}_{network2}"
+                df_ml[col_name] = np.random.normal(0.3, 0.3, len(df_ml)).clip(-0.5, 0.9).round(3)
+    
+    save_dataset(df_ml, 'extended_patient_data_ml.csv')
+    
+    # Create ML training dataset with selected features
+    ml_cols = ['patient_id', 'age', 'sexe', 'madrs_score_bl', 'bdi_score_bl',
+              'bai_score_bl', 'pss_score_bl', 'shaps_score_bl', 
+              'bfi_extraversion_bl', 'bfi_agreeableness_bl', 'bfi_conscientiousness_bl',
+              'bfi_neuroticism_bl', 'bfi_openness_bl', 'madrs_score_fu', 'is_responder']
+    df_ml_training = df_patients[ml_cols].copy()
+    save_dataset(df_ml_training, 'ml_training_data.csv')
+    
+    # Create side effects dataset
+    df_side = df_patients[['patient_id', 'protocol', 'side_effect', 'side_effect_severity']].copy()
+    # Add dates when side effects were reported
+    df_side['date_reported'] = [start_date + timedelta(days=np.random.randint(1, 14)) 
+                              for start_date in df_patients['treatment_start_date']]
+    save_dataset(df_side, 'side_effects.csv')
+    
+    # Create EMA (ecological momentary assessment) data
+    all_ema_rows = []
+    for idx, row in df_patients.iterrows():
+        # Generate 5-15 EMA records per patient over the treatment period
+        treatment_days = (row['treatment_end_date'] - row['treatment_start_date']).days
+        num_emas = np.random.randint(5, min(16, treatment_days + 1))
+        
+        # Sample days to record EMA
+        ema_days = sorted(np.random.choice(range(treatment_days), size=num_emas, replace=False))
+        
+        # Initial state based on baseline scores
+        mood_base = 1.0 - (row['madrs_score_bl'] / 60)  # Convert MADRS to 0-1 scale (inverted)
+        
+        # Responders improve more rapidly
+        improvement_rate = 0.03 if row['is_responder'] else 0.01
+        
+        for day in ema_days:
+            ema_date = row['treatment_start_date'] + timedelta(days=day)
+            
+            # Mood improves over time plus random daily variation
+            day_progress = day / treatment_days
+            improvement = day_progress * improvement_rate * 15  # 15 points max improvement for responders
+            daily_variation = np.random.normal(0, 0.1)  # Random daily fluctuation
+            
+            mood_today = min(max(mood_base + improvement + daily_variation, 0), 1)
+            
+            # Convert to 1-10 scale
+            mood_score = round(1 + mood_today * 9)
+            
+            # Add anxiety and sleep ratings that correlate with mood but have variation
+            anxiety_base = 10 - mood_score + np.random.randint(-2, 3)
+            anxiety_score = max(min(anxiety_base, 10), 1)
+            
+            sleep_base = (mood_score / 2) + np.random.randint(-1, 2) + 2
+            sleep_score = max(min(sleep_base, 10), 1)
+            
+            all_ema_rows.append({
+                'patient_id': row['patient_id'],
+                'date': ema_date,
+                'day_in_treatment': day + 1,
+                'mood_score': mood_score,
+                'anxiety_score': anxiety_score,
+                'sleep_quality': sleep_score
+            })
+    
+    # Create EMA DataFrame
+    df_ema = pd.DataFrame(all_ema_rows)
+    save_dataset(df_ema, 'simulated_ema_data.csv')
+    
+    # Create synthetic nurse inputs data
+    all_nurse_rows = []
+    nurse_ids = ['N001', 'N002', 'N003', 'N004', 'N005']
+    
+    for idx, row in df_patients.iterrows():
+        # Generate 2-4 nurse records per patient over the treatment period
+        num_records = np.random.randint(2, 5)
+        
+        # Sample days to record nurse inputs
+        treatment_days = (row['treatment_end_date'] - row['treatment_start_date']).days
+        record_days = sorted(np.random.choice(range(treatment_days), size=min(num_records, treatment_days), replace=False))
+        
+        for day in record_days:
+            record_date = row['treatment_start_date'] + timedelta(days=day)
+            
+            # Assign random nurse
+            nurse_id = np.random.choice(nurse_ids)
+            
+            # Treatment adherence tends to be higher for responders
+            if row['is_responder']:
+                adherence = np.random.choice(['high', 'medium', 'low'], p=[0.7, 0.25, 0.05])
+            else:
+                adherence = np.random.choice(['high', 'medium', 'low'], p=[0.4, 0.4, 0.2])
+            
+            # Notes depend on side effects
+            if row['side_effect'] != 'None':
+                if row['side_effect_severity'] >= 3:
+                    notes = f"Patient reports {row['side_effect'].lower()} (severity {row['side_effect_severity']}/5). Monitoring closely."
+                else:
+                    notes = f"Mild {row['side_effect'].lower()} reported, patient is tolerating treatment."
+            else:
+                notes = "No side effects reported."
+            
+            all_nurse_rows.append({
+                'patient_id': row['patient_id'],
+                'nurse_id': nurse_id,
+                'date': record_date,
+                'day_in_treatment': day + 1,
+                'treatment_adherence': adherence,
+                'side_effect_reported': row['side_effect'] != 'None',
+                'need_physician_consult': row['side_effect_severity'] >= 4,
+                'notes': notes
+            })
+    
+    # Create nurse inputs DataFrame
+    df_nurse = pd.DataFrame(all_nurse_rows)
+    save_dataset(df_nurse, 'nurse_inputs.csv')
+    
+    logger.info("All synthetic datasets generated successfully")
+
+if __name__ == "__main__":
+    try:
+        generate_datasets()
+    except Exception as e:
+        logger.error(f"Error generating synthetic data: {e}")
+        logger.exception("Exception details:")

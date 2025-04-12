@@ -1,0 +1,261 @@
+2025-04-10 08:27:31,005 - root - INFO - Application started
+2025-04-10 08:27:33,394 - root - INFO - Application started
+2025-04-10 08:27:35,355 - root - INFO - Application started
+2025-04-10 08:27:35,435 - root - INFO - Application started
+2025-04-10 08:27:35,504 - root - INFO - Application started
+2025-04-10 08:27:35,510 - root - INFO - Running database initialization check...
+2025-04-10 08:27:35,510 - root - INFO - Initializing database...
+2025-04-10 08:27:35,513 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-10 08:27:35,514 - root - INFO - Table 'side_effects' checked/created.
+2025-04-10 08:27:35,514 - root - INFO - Table 'patients' checked/created.
+2025-04-10 08:27:35,514 - root - INFO - Database initialization complete.
+2025-04-10 08:27:35,514 - root - INFO - Database initialization check complete.
+2025-04-10 08:27:35,515 - root - INFO - CSS styles loaded.
+2025-04-10 08:27:35,715 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-10 08:27:35,716 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-10 08:27:35,716 - root - INFO - Data loaded successfully.
+2025-04-10 08:27:35,717 - root - INFO - Default patient set: P001
+2025-04-10 08:27:35,722 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 08:27:36,579 - root - INFO - Application started
+2025-04-10 08:27:36,586 - root - INFO - CSS styles loaded.
+2025-04-10 08:27:36,672 - root - INFO - Application started
+2025-04-10 08:27:36,747 - root - INFO - CSS styles loaded.
+2025-04-10 08:27:36,752 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 08:27:41,541 - root - INFO - Application started
+2025-04-10 08:27:41,552 - root - INFO - CSS styles loaded.
+2025-04-10 08:27:41,565 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 08:27:41,754 - root - INFO - Application started
+2025-04-10 08:27:41,757 - root - INFO - CSS styles loaded.
+2025-04-10 08:27:41,759 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-10 08:27:41,826 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-10 08:27:41,826 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-10 08:27:41,827 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-10 08:27:41,827 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-10 08:27:41,843 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 08:27:41,843 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 08:27:41,844 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 08:27:41,844 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 08:27:42,303 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-10 08:27:42,306 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-10 08:27:42,307 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-10 08:28:48,438 - root - INFO - Application started
+2025-04-10 08:28:51,984 - root - INFO - Application started
+2025-04-10 08:28:54,100 - root - INFO - Application started
+2025-04-10 08:28:54,175 - root - INFO - Application started
+2025-04-10 08:28:54,223 - root - INFO - Application started
+2025-04-10 08:28:54,238 - root - INFO - Running database initialization check...
+2025-04-10 08:28:54,238 - root - INFO - Initializing database...
+2025-04-10 08:28:54,242 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-10 08:28:54,243 - root - INFO - Table 'side_effects' checked/created.
+2025-04-10 08:28:54,243 - root - INFO - Table 'patients' checked/created.
+2025-04-10 08:28:54,243 - root - INFO - Database initialization complete.
+2025-04-10 08:28:54,244 - root - INFO - Database initialization check complete.
+2025-04-10 08:28:54,245 - root - INFO - CSS styles loaded.
+2025-04-10 08:28:54,482 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-10 08:28:54,482 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-10 08:28:54,482 - root - INFO - Data loaded successfully.
+2025-04-10 08:28:54,482 - root - INFO - Default patient set: P001
+2025-04-10 08:28:54,487 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 08:28:59,073 - root - INFO - Application started
+2025-04-10 08:28:59,089 - root - INFO - CSS styles loaded.
+2025-04-10 08:28:59,264 - root - INFO - Application started
+2025-04-10 08:28:59,276 - root - INFO - CSS styles loaded.
+2025-04-10 08:28:59,287 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 09:10:10,531 - root - INFO - Application started
+2025-04-10 09:10:12,424 - root - INFO - Application started
+2025-04-10 09:10:14,513 - root - INFO - Application started
+2025-04-10 09:10:14,639 - root - INFO - Application started
+2025-04-10 09:10:18,646 - root - INFO - Application started
+2025-04-10 09:10:18,829 - root - INFO - Application started
+2025-04-10 09:10:18,902 - root - INFO - Application started
+2025-04-10 09:10:18,905 - root - INFO - Running database initialization check...
+2025-04-10 09:10:18,905 - root - INFO - Initializing database...
+2025-04-10 09:10:18,909 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-10 09:10:18,910 - root - INFO - Table 'side_effects' checked/created.
+2025-04-10 09:10:18,910 - root - INFO - Table 'patients' checked/created.
+2025-04-10 09:10:18,910 - root - INFO - Database initialization complete.
+2025-04-10 09:10:18,910 - root - INFO - Database initialization check complete.
+2025-04-10 09:10:18,911 - root - INFO - CSS styles loaded.
+2025-04-10 09:10:19,086 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-10 09:10:19,086 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-10 09:10:19,086 - root - INFO - Data loaded successfully.
+2025-04-10 09:10:19,087 - root - INFO - Default patient set: P001
+2025-04-10 09:10:19,090 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 09:10:20,285 - root - INFO - Application started
+2025-04-10 09:10:20,288 - root - INFO - CSS styles loaded.
+2025-04-10 09:10:20,403 - root - INFO - Application started
+2025-04-10 09:10:20,412 - root - INFO - CSS styles loaded.
+2025-04-10 09:10:20,418 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 09:10:22,418 - root - INFO - Application started
+2025-04-10 09:10:22,426 - root - INFO - CSS styles loaded.
+2025-04-10 09:10:22,434 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-10 09:10:22,579 - root - INFO - Application started
+2025-04-10 09:10:22,589 - root - INFO - CSS styles loaded.
+2025-04-10 09:10:22,597 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-10 09:10:22,680 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-10 09:10:22,680 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-10 09:10:22,681 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-10 09:10:22,681 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-10 09:10:22,682 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 09:10:22,682 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 09:10:22,682 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 09:10:22,682 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-10 09:10:23,092 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-10 09:10:23,094 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-10 09:10:23,096 - root - INFO - Found side effect data in both database and CSV for P001, using database data

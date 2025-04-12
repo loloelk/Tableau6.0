@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go  # Added for scatter trace
 import numpy as np
 import logging
 from services.nurse_service import get_nurse_inputs_history, get_side_effects_history
@@ -131,13 +132,58 @@ def patient_journey_page():
             # Add less jitter to potentially reduce overlap issues if library versions differ
             journey_df['y_value'] = journey_df['y_value'] + np.random.uniform(-0.05, 0.05, size=len(journey_df))
 
+            # Create a better visual timeline with consistent styling
             try:
-                fig = px.scatter( journey_df, x='date', y='y_value', color='event_type', title="Parcours Patient Chronologique",
-                                  hover_data={'date': '|%Y-%m-%d', 'event_type': True, 'details': True, 'y_value': False},
-                                  labels={'date': 'Date', 'event_type': 'Type d\'Événement', 'y_value': ''})
-                fig.update_layout( yaxis=dict(tickmode='array', tickvals=list(event_type_map.values()), ticktext=list(event_type_map.keys()), showgrid=False),
-                                   xaxis_title="Date", legend_title_text='Type d\'Événement')
-                fig.update_traces(marker=dict(size=12))
+                fig = px.scatter(
+                    journey_df, 
+                    x='date', 
+                    y='y_value', 
+                    color='event_type', 
+                    title="Parcours Patient Chronologique",
+                    color_discrete_sequence=['#1976d2', '#64b5f6', '#42a5f5', '#90caf9'], # Blue color palette
+                    hover_data={
+                        'date': '|%Y-%m-%d', 
+                        'event_type': True, 
+                        'details': True, 
+                        'y_value': False
+                    },
+                    labels={'date': 'Date', 'event_type': 'Type d\'Événement', 'y_value': ''}
+                )
+                
+                # Improve the timeline appearance
+                fig.update_layout(
+                    yaxis=dict(
+                        tickmode='array', 
+                        tickvals=list(event_type_map.values()), 
+                        ticktext=list(event_type_map.keys()), 
+                        showgrid=False
+                    ),
+                    xaxis_title="Date", 
+                    legend_title_text='Type d\'Événement',
+                    plot_bgcolor='rgba(0,0,0,0.02)',  # Very light background
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    hovermode='closest'
+                )
+                
+                # Add connecting line to show progression
+                fig.update_traces(
+                    marker=dict(size=14, symbol='circle'),
+                    line=dict(color='#e0e0e0', width=1.5)
+                )
+                
+                # Add connecting line between events of the same type
+                for event_type in journey_df['event_type'].unique():
+                    event_data = journey_df[journey_df['event_type'] == event_type].sort_values('date')
+                    if len(event_data) > 1:
+                        fig.add_trace(go.Scatter(
+                            x=event_data['date'],
+                            y=event_data['y_value'],
+                            mode='lines',
+                            line=dict(color='#e0e0e0', width=1, dash='dot'),
+                            showlegend=False,
+                            hoverinfo='skip'
+                        ))
+                
                 st.plotly_chart(fig, use_container_width=True)
 
                 with st.expander("Voir les détails des événements (triés par date)"):

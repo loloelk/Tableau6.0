@@ -1,0 +1,2191 @@
+2025-04-09 10:51:27,215 - root - INFO - Application started
+2025-04-09 10:51:30,277 - root - INFO - Application started
+2025-04-09 10:51:32,700 - root - INFO - Application started
+2025-04-09 10:51:32,794 - root - INFO - Application started
+2025-04-09 10:51:32,843 - root - INFO - Application started
+2025-04-09 10:51:32,847 - root - INFO - Running database initialization check...
+2025-04-09 10:51:32,847 - root - INFO - Initializing database...
+2025-04-09 10:51:32,849 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 10:51:32,849 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 10:51:32,850 - root - INFO - Table 'patients' checked/created.
+2025-04-09 10:51:32,850 - root - INFO - Database initialization complete.
+2025-04-09 10:51:32,850 - root - INFO - Database initialization check complete.
+2025-04-09 10:51:32,851 - root - INFO - CSS styles loaded.
+2025-04-09 10:51:33,114 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 10:51:34,882 - services.ml_service - INFO - Loaded training data with 1055 rows and 427 columns
+2025-04-09 10:51:34,906 - services.ml_service - INFO - Identified 223 potential feature columns
+2025-04-09 10:51:34,962 - services.ml_service - INFO - Imputed 221 features with less than 30.0% missing values
+2025-04-09 10:51:34,976 - services.ml_service - INFO - Selected 15 features using univariate tests
+2025-04-09 10:51:34,977 - services.ml_service - INFO - Selected and saved 15 features
+2025-04-09 10:51:35,108 - services.ml_service - INFO - Response prediction model trained and saved to /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 10:51:35,113 - services.ml_service - INFO - Feature importance:
+             Feature  Importance
+11    shaps_score_bl    0.114415
+13      sm_gauche_bl    0.105830
+9       cgi_score_bl    0.086841
+12  total_seances_bl    0.084159
+3           pss_9_bl    0.078287
+0          bdi_11_bl    0.067590
+14      qfs_rfc_2_bl    0.067015
+10        shaps_4_bl    0.065784
+8         madrs_4_bl    0.059581
+6    cognitive_32_bl    0.053832
+4            rs_5_bl    0.053338
+5    cognitive_27_bl    0.048298
+2          bai_11_bl    0.041648
+1           bai_8_bl    0.038484
+7       rx_change_bl    0.034898
+2025-04-09 10:51:35,115 - root - INFO - ML model initialized successfully
+2025-04-09 10:51:35,115 - root - INFO - Data loaded successfully.
+2025-04-09 10:51:35,115 - root - INFO - Default patient set: P001
+2025-04-09 10:51:35,119 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 10:51:41,242 - root - INFO - Application started
+2025-04-09 10:51:41,254 - root - INFO - CSS styles loaded.
+2025-04-09 10:51:41,367 - root - INFO - Application started
+2025-04-09 10:51:41,370 - root - INFO - CSS styles loaded.
+2025-04-09 10:51:41,373 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 10:51:42,788 - root - INFO - Application started
+2025-04-09 10:51:42,796 - root - INFO - CSS styles loaded.
+2025-04-09 10:51:42,803 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 10:51:42,894 - root - INFO - Application started
+2025-04-09 10:51:42,902 - root - INFO - CSS styles loaded.
+2025-04-09 10:51:42,908 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 10:51:42,916 - root - ERROR - Error loading ML prediction for patient P001
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/dashboard.py", line 176, in patient_dashboard
+    response_prob = predict_response_probability(patient_row.to_frame().T)
+                                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/generic.py", line 6299, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'to_frame'
+2025-04-09 10:51:43,464 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 10:51:43,466 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 10:51:43,468 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:02:02,551 - root - INFO - Application started
+2025-04-09 11:02:04,257 - root - INFO - Application started
+2025-04-09 11:02:07,434 - root - INFO - Application started
+2025-04-09 11:02:07,513 - root - INFO - Application started
+2025-04-09 11:02:07,562 - root - INFO - Application started
+2025-04-09 11:02:07,566 - root - INFO - Running database initialization check...
+2025-04-09 11:02:07,566 - root - INFO - Initializing database...
+2025-04-09 11:02:07,570 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 11:02:07,570 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 11:02:07,570 - root - INFO - Table 'patients' checked/created.
+2025-04-09 11:02:07,570 - root - INFO - Database initialization complete.
+2025-04-09 11:02:07,571 - root - INFO - Database initialization check complete.
+2025-04-09 11:02:07,572 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:07,715 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 11:02:08,003 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 11:02:08,003 - root - INFO - ML model initialized successfully
+2025-04-09 11:02:08,004 - root - INFO - Data loaded successfully.
+2025-04-09 11:02:08,004 - root - INFO - Default patient set: P001
+2025-04-09 11:02:08,007 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 11:02:10,493 - root - INFO - Application started
+2025-04-09 11:02:10,501 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:10,508 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 11:02:10,650 - root - INFO - Application started
+2025-04-09 11:02:10,658 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:10,663 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 11:02:10,760 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 11:02:11,403 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:02:11,405 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:02:11,406 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:02:11,538 - root - INFO - Application started
+2025-04-09 11:02:11,541 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:11,609 - root - INFO - Application started
+2025-04-09 11:02:11,613 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:11,615 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 11:02:11,652 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 11:02:11,839 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:02:11,841 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:02:11,843 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:02:36,599 - root - INFO - Application started
+2025-04-09 11:02:36,613 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:36,778 - root - INFO - Application started
+2025-04-09 11:02:36,781 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:36,783 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 11:02:36,833 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 11:02:37,102 - root - INFO - Retrieved 1 side effect records from database for patient P002
+2025-04-09 11:02:49,015 - root - INFO - Application started
+2025-04-09 11:02:49,026 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:49,208 - root - INFO - Application started
+2025-04-09 11:02:49,224 - root - INFO - CSS styles loaded.
+2025-04-09 11:02:49,233 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 11:02:49,287 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 11:02:49,531 - root - INFO - Retrieved 1 side effect records from database for patient P006
+2025-04-09 11:24:46,683 - root - INFO - Application started
+2025-04-09 11:24:53,651 - root - INFO - Application started
+2025-04-09 11:24:55,105 - root - INFO - Application started
+2025-04-09 11:24:58,073 - root - INFO - Application started
+2025-04-09 11:24:58,167 - root - INFO - Application started
+2025-04-09 11:24:58,176 - root - INFO - Running database initialization check...
+2025-04-09 11:24:58,177 - root - INFO - Initializing database...
+2025-04-09 11:24:58,184 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 11:24:58,184 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 11:24:58,185 - root - INFO - Table 'patients' checked/created.
+2025-04-09 11:24:58,185 - root - INFO - Database initialization complete.
+2025-04-09 11:24:58,185 - root - INFO - Database initialization check complete.
+2025-04-09 11:24:58,187 - root - INFO - CSS styles loaded.
+2025-04-09 11:24:58,389 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 11:24:58,389 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 11:24:58,389 - root - INFO - ML model initialized successfully
+2025-04-09 11:24:58,389 - root - INFO - Data loaded successfully.
+2025-04-09 11:24:58,390 - root - INFO - Default patient set: P001
+2025-04-09 11:24:58,394 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 11:24:59,617 - root - INFO - Application started
+2025-04-09 11:24:59,638 - root - INFO - CSS styles loaded.
+2025-04-09 11:24:59,731 - root - INFO - Application started
+2025-04-09 11:24:59,740 - root - INFO - CSS styles loaded.
+2025-04-09 11:24:59,749 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 11:25:01,883 - root - INFO - Application started
+2025-04-09 11:25:01,889 - root - INFO - CSS styles loaded.
+2025-04-09 11:25:01,994 - root - INFO - Application started
+2025-04-09 11:25:02,003 - root - INFO - CSS styles loaded.
+2025-04-09 11:25:02,011 - root - INFO - Routing to page: Performance ML
+2025-04-09 11:25:02,087 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:25:02,096 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:25:02,097 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 148, in ml_performance_page
+    X_valid = X[valid_idx]
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4149, in _getitem_bool_array
+    key = check_bool_indexer(self.index, key)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexing.py", line 2662, in check_bool_indexer
+    raise IndexingError(
+    ...<3 lines>...
+    )
+pandas.errors.IndexingError: Unalignable boolean Series provided as indexer (index of the boolean Series and of the indexed object do not match).
+2025-04-09 11:25:02,745 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:25:02,751 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:25:02,753 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 305, in ml_performance_page
+    X_valid = X[valid_idx]
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4149, in _getitem_bool_array
+    key = check_bool_indexer(self.index, key)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexing.py", line 2662, in check_bool_indexer
+    raise IndexingError(
+    ...<3 lines>...
+    )
+pandas.errors.IndexingError: Unalignable boolean Series provided as indexer (index of the boolean Series and of the indexed object do not match).
+2025-04-09 11:30:27,497 - root - INFO - Application started
+2025-04-09 11:30:27,516 - root - INFO - CSS styles loaded.
+2025-04-09 11:30:27,778 - root - INFO - Application started
+2025-04-09 11:30:27,781 - root - INFO - CSS styles loaded.
+2025-04-09 11:30:27,784 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 11:30:43,748 - root - INFO - Application started
+2025-04-09 11:30:43,758 - root - INFO - CSS styles loaded.
+2025-04-09 11:30:43,945 - root - INFO - Application started
+2025-04-09 11:30:43,953 - root - INFO - CSS styles loaded.
+2025-04-09 11:30:43,957 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 11:30:44,031 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 11:30:44,556 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:30:44,602 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:30:44,616 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:31:28,712 - root - INFO - Application started
+2025-04-09 11:31:28,719 - root - INFO - CSS styles loaded.
+2025-04-09 11:31:28,987 - root - INFO - Application started
+2025-04-09 11:31:28,995 - root - INFO - CSS styles loaded.
+2025-04-09 11:31:29,003 - root - INFO - Routing to page: Plan de Soins et Entrées Infirmières
+2025-04-09 11:31:44,918 - root - INFO - Application started
+2025-04-09 11:31:44,924 - root - INFO - CSS styles loaded.
+2025-04-09 11:31:45,121 - root - INFO - Application started
+2025-04-09 11:31:45,131 - root - INFO - CSS styles loaded.
+2025-04-09 11:31:45,136 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 11:31:45,227 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 11:31:45,432 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:31:45,437 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:31:45,438 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:31:53,185 - root - INFO - Application started
+2025-04-09 11:31:53,209 - root - INFO - CSS styles loaded.
+2025-04-09 11:31:53,368 - root - INFO - Application started
+2025-04-09 11:31:53,371 - root - INFO - CSS styles loaded.
+2025-04-09 11:31:53,374 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-09 11:31:53,378 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:31:53,381 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:31:53,384 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:32:03,618 - root - INFO - Application started
+2025-04-09 11:32:03,626 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:03,857 - root - INFO - Application started
+2025-04-09 11:32:03,869 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:03,878 - root - INFO - Routing to page: Parcours Patient
+2025-04-09 11:32:03,891 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:32:03,898 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:32:03,903 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:32:12,471 - root - INFO - Application started
+2025-04-09 11:32:12,480 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:12,683 - root - INFO - Application started
+2025-04-09 11:32:12,694 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:12,707 - root - INFO - Routing to page: Analyse des Protocoles
+2025-04-09 11:32:18,456 - root - INFO - Application started
+2025-04-09 11:32:18,464 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:18,471 - root - INFO - Routing to page: Analyse des Protocoles
+2025-04-09 11:32:26,382 - root - INFO - Application started
+2025-04-09 11:32:26,392 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:26,589 - root - INFO - Application started
+2025-04-09 11:32:26,597 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:26,603 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-09 11:32:26,607 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:32:26,609 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:32:26,611 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:32:28,953 - root - INFO - Application started
+2025-04-09 11:32:28,958 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:29,053 - root - INFO - Application started
+2025-04-09 11:32:29,059 - root - INFO - CSS styles loaded.
+2025-04-09 11:32:29,071 - root - INFO - Routing to page: Performance ML
+2025-04-09 11:32:29,123 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:32:29,137 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:32:29,138 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 154, in ml_performance_page
+    X_valid = X[valid_idx].reset_index(drop=True)
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4143, in _getitem_bool_array
+    raise ValueError(
+        f"Item wrong length {len(key)} instead of {len(self.index)}."
+    )
+ValueError: Item wrong length 0 instead of 1055.
+2025-04-09 11:32:29,259 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:32:29,266 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:32:29,268 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 310, in ml_performance_page
+    X_valid = X[valid_idx]
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4149, in _getitem_bool_array
+    key = check_bool_indexer(self.index, key)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexing.py", line 2662, in check_bool_indexer
+    raise IndexingError(
+    ...<3 lines>...
+    )
+pandas.errors.IndexingError: Unalignable boolean Series provided as indexer (index of the boolean Series and of the indexed object do not match).
+2025-04-09 11:36:13,793 - root - INFO - Application started
+2025-04-09 11:36:26,905 - root - INFO - Application started
+2025-04-09 11:36:28,413 - root - INFO - Application started
+2025-04-09 11:36:29,563 - root - INFO - Application started
+2025-04-09 11:36:29,623 - root - INFO - Application started
+2025-04-09 11:36:29,634 - root - INFO - Running database initialization check...
+2025-04-09 11:36:29,635 - root - INFO - Initializing database...
+2025-04-09 11:36:29,638 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 11:36:29,639 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 11:36:29,639 - root - INFO - Table 'patients' checked/created.
+2025-04-09 11:36:29,639 - root - INFO - Database initialization complete.
+2025-04-09 11:36:29,639 - root - INFO - Database initialization check complete.
+2025-04-09 11:36:29,640 - root - INFO - CSS styles loaded.
+2025-04-09 11:36:29,792 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 11:36:29,792 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 11:36:29,792 - root - INFO - ML model initialized successfully
+2025-04-09 11:36:29,792 - root - INFO - Data loaded successfully.
+2025-04-09 11:36:29,792 - root - INFO - Default patient set: P001
+2025-04-09 11:36:29,796 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 11:36:48,080 - root - INFO - Application started
+2025-04-09 11:36:48,095 - root - INFO - CSS styles loaded.
+2025-04-09 11:36:48,279 - root - INFO - Application started
+2025-04-09 11:36:48,282 - root - INFO - CSS styles loaded.
+2025-04-09 11:36:48,285 - root - INFO - Routing to page: Performance ML
+2025-04-09 11:36:48,367 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:36:48,381 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:36:48,383 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 154, in ml_performance_page
+    X_valid = X[valid_idx].reset_index(drop=True)
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4143, in _getitem_bool_array
+    raise ValueError(
+        f"Item wrong length {len(key)} instead of {len(self.index)}."
+    )
+ValueError: Item wrong length 0 instead of 1055.
+2025-04-09 11:36:48,901 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:36:48,907 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:36:48,909 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 316, in ml_performance_page
+    X_valid = X[valid_idx].reset_index(drop=True)
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4143, in _getitem_bool_array
+    raise ValueError(
+        f"Item wrong length {len(key)} instead of {len(self.index)}."
+    )
+ValueError: Item wrong length 0 instead of 1055.
+2025-04-09 11:37:07,012 - root - INFO - Application started
+2025-04-09 11:37:07,027 - root - INFO - CSS styles loaded.
+2025-04-09 11:37:07,234 - root - INFO - Application started
+2025-04-09 11:37:07,237 - root - INFO - CSS styles loaded.
+2025-04-09 11:37:07,241 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 11:37:07,293 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 11:37:07,774 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 11:37:07,776 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 11:37:07,778 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 11:40:22,952 - root - INFO - Application started
+2025-04-09 11:40:22,961 - root - INFO - CSS styles loaded.
+2025-04-09 11:40:23,269 - root - INFO - Application started
+2025-04-09 11:40:23,273 - root - INFO - CSS styles loaded.
+2025-04-09 11:40:23,281 - root - INFO - Routing to page: Performance ML
+2025-04-09 11:40:23,400 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:40:23,439 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:40:23,443 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 154, in ml_performance_page
+    X_valid = X[valid_idx].reset_index(drop=True)
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4143, in _getitem_bool_array
+    raise ValueError(
+        f"Item wrong length {len(key)} instead of {len(self.index)}."
+    )
+ValueError: Item wrong length 0 instead of 1055.
+2025-04-09 11:40:23,564 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 11:40:23,570 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 11:40:23,573 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 316, in ml_performance_page
+    X_valid = X[valid_idx].reset_index(drop=True)
+              ~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4093, in __getitem__
+    return self._getitem_bool_array(key)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4143, in _getitem_bool_array
+    raise ValueError(
+        f"Item wrong length {len(key)} instead of {len(self.index)}."
+    )
+ValueError: Item wrong length 0 instead of 1055.
+2025-04-09 12:01:39,615 - root - INFO - Application started
+2025-04-09 12:01:44,999 - root - INFO - Application started
+2025-04-09 12:01:48,469 - root - INFO - Application started
+2025-04-09 12:01:48,625 - root - INFO - Application started
+2025-04-09 12:01:48,675 - root - INFO - Application started
+2025-04-09 12:01:48,684 - root - INFO - Running database initialization check...
+2025-04-09 12:01:48,685 - root - INFO - Initializing database...
+2025-04-09 12:01:48,692 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 12:01:48,693 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 12:01:48,693 - root - INFO - Table 'patients' checked/created.
+2025-04-09 12:01:48,693 - root - INFO - Database initialization complete.
+2025-04-09 12:01:48,694 - root - INFO - Database initialization check complete.
+2025-04-09 12:01:48,695 - root - INFO - CSS styles loaded.
+2025-04-09 12:01:48,856 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 12:01:48,856 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 12:01:48,857 - root - INFO - ML model initialized successfully
+2025-04-09 12:01:48,857 - root - INFO - Data loaded successfully.
+2025-04-09 12:01:48,857 - root - INFO - Default patient set: P001
+2025-04-09 12:01:48,860 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:01:57,486 - root - INFO - Application started
+2025-04-09 12:01:57,500 - root - INFO - CSS styles loaded.
+2025-04-09 12:01:57,671 - root - INFO - Application started
+2025-04-09 12:01:57,679 - root - INFO - CSS styles loaded.
+2025-04-09 12:01:57,687 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:01:57,758 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 12:01:57,768 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:01:57,769 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 150, in ml_performance_page
+    y = pd.Series(y.values, index=X.index)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/series.py", line 575, in __init__
+    com.require_length_match(data, index)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/common.py", line 573, in require_length_match
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Length of values (0) does not match length of index (1055)
+2025-04-09 12:01:59,799 - services.ml_service - ERROR - MADRS baseline or follow-up scores missing
+2025-04-09 12:01:59,869 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:01:59,872 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 312, in ml_performance_page
+    y = pd.Series(y.values, index=X.index)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/series.py", line 575, in __init__
+    com.require_length_match(data, index)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/common.py", line 573, in require_length_match
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Length of values (0) does not match length of index (1055)
+2025-04-09 12:08:28,652 - root - INFO - Application started
+2025-04-09 12:08:31,025 - root - INFO - Application started
+2025-04-09 12:08:31,771 - root - INFO - Application started
+2025-04-09 12:08:34,750 - root - INFO - Application started
+2025-04-09 12:08:34,933 - root - INFO - Application started
+2025-04-09 12:08:34,989 - root - INFO - Application started
+2025-04-09 12:08:34,993 - root - INFO - Running database initialization check...
+2025-04-09 12:08:34,993 - root - INFO - Initializing database...
+2025-04-09 12:08:34,997 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 12:08:34,997 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 12:08:34,998 - root - INFO - Table 'patients' checked/created.
+2025-04-09 12:08:34,998 - root - INFO - Database initialization complete.
+2025-04-09 12:08:34,998 - root - INFO - Database initialization check complete.
+2025-04-09 12:08:35,003 - root - INFO - CSS styles loaded.
+2025-04-09 12:08:35,147 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 12:08:35,147 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 12:08:35,147 - root - INFO - ML model initialized successfully
+2025-04-09 12:08:35,148 - root - INFO - Data loaded successfully.
+2025-04-09 12:08:35,148 - root - INFO - Default patient set: P001
+2025-04-09 12:08:35,151 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:08:36,385 - root - INFO - Application started
+2025-04-09 12:08:36,393 - root - INFO - CSS styles loaded.
+2025-04-09 12:08:36,493 - root - INFO - Application started
+2025-04-09 12:08:36,498 - root - INFO - CSS styles loaded.
+2025-04-09 12:08:36,516 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:08:39,997 - root - INFO - Application started
+2025-04-09 12:08:40,003 - root - INFO - CSS styles loaded.
+2025-04-09 12:08:40,115 - root - INFO - Application started
+2025-04-09 12:08:40,131 - root - INFO - CSS styles loaded.
+2025-04-09 12:08:40,137 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:09:01,080 - root - INFO - Application started
+2025-04-09 12:09:03,656 - root - INFO - Application started
+2025-04-09 12:09:05,732 - root - INFO - Application started
+2025-04-09 12:09:05,843 - root - INFO - Application started
+2025-04-09 12:09:05,908 - root - INFO - Application started
+2025-04-09 12:09:05,912 - root - INFO - CSS styles loaded.
+2025-04-09 12:09:06,078 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 12:09:06,078 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 12:09:06,079 - root - INFO - ML model initialized successfully
+2025-04-09 12:09:06,079 - root - INFO - Data loaded successfully.
+2025-04-09 12:09:06,079 - root - INFO - Default patient set: P001
+2025-04-09 12:09:06,082 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:09:10,501 - root - INFO - Application started
+2025-04-09 12:09:10,515 - root - INFO - CSS styles loaded.
+2025-04-09 12:09:10,805 - root - INFO - Application started
+2025-04-09 12:09:10,814 - root - INFO - CSS styles loaded.
+2025-04-09 12:09:10,835 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:12:02,715 - root - INFO - Application started
+2025-04-09 12:12:02,738 - root - INFO - CSS styles loaded.
+2025-04-09 12:12:03,092 - root - INFO - Application started
+2025-04-09 12:12:03,103 - root - INFO - CSS styles loaded.
+2025-04-09 12:12:03,107 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:12:03,739 - root - INFO - Application started
+2025-04-09 12:12:03,742 - root - INFO - CSS styles loaded.
+2025-04-09 12:12:04,115 - root - INFO - Application started
+2025-04-09 12:12:04,129 - root - INFO - CSS styles loaded.
+2025-04-09 12:12:04,141 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:12:04,222 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:12:04,757 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:12:04,766 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:12:04,767 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:15:48,200 - root - INFO - Application started
+2025-04-09 12:15:48,210 - root - INFO - CSS styles loaded.
+2025-04-09 12:15:48,579 - root - INFO - Application started
+2025-04-09 12:15:48,597 - root - INFO - CSS styles loaded.
+2025-04-09 12:15:48,619 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:15:48,725 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:15:48,994 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:15:48,999 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:15:49,001 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:16:51,650 - root - INFO - Application started
+2025-04-09 12:16:51,662 - root - INFO - CSS styles loaded.
+2025-04-09 12:16:51,959 - root - INFO - Application started
+2025-04-09 12:16:51,963 - root - INFO - CSS styles loaded.
+2025-04-09 12:16:51,968 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:16:52,146 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:16:53,178 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'madrs_score_fu'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 353, in ml_performance_page
+    valid_fu = pd.to_numeric(training_data['madrs_score_fu'], errors='coerce').notna()
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'madrs_score_fu'
+2025-04-09 12:19:32,131 - root - INFO - Application started
+2025-04-09 12:19:34,581 - root - INFO - Application started
+2025-04-09 12:19:37,252 - root - INFO - Application started
+2025-04-09 12:19:37,511 - root - INFO - Application started
+2025-04-09 12:19:37,574 - root - INFO - Application started
+2025-04-09 12:19:37,580 - root - INFO - Running database initialization check...
+2025-04-09 12:19:37,581 - root - INFO - Initializing database...
+2025-04-09 12:19:37,588 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 12:19:37,589 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 12:19:37,589 - root - INFO - Table 'patients' checked/created.
+2025-04-09 12:19:37,589 - root - INFO - Database initialization complete.
+2025-04-09 12:19:37,589 - root - INFO - Database initialization check complete.
+2025-04-09 12:19:37,592 - root - INFO - CSS styles loaded.
+2025-04-09 12:19:38,030 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 12:19:38,031 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 12:19:38,031 - root - INFO - ML model initialized successfully
+2025-04-09 12:19:38,031 - root - INFO - Data loaded successfully.
+2025-04-09 12:19:38,031 - root - INFO - Default patient set: P001
+2025-04-09 12:19:38,035 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:19:40,643 - root - INFO - Application started
+2025-04-09 12:19:40,652 - root - INFO - CSS styles loaded.
+2025-04-09 12:19:40,667 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:19:40,989 - root - INFO - Application started
+2025-04-09 12:19:41,008 - root - INFO - CSS styles loaded.
+2025-04-09 12:19:41,016 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:19:41,094 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:19:41,995 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:19:41,999 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:19:42,001 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:19:42,525 - root - INFO - Application started
+2025-04-09 12:19:42,552 - root - INFO - CSS styles loaded.
+2025-04-09 12:19:42,658 - root - INFO - Application started
+2025-04-09 12:19:42,661 - root - INFO - CSS styles loaded.
+2025-04-09 12:19:42,665 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:19:42,702 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:19:42,962 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:19:42,965 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:19:42,966 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:19:46,233 - root - INFO - Application started
+2025-04-09 12:19:46,245 - root - INFO - CSS styles loaded.
+2025-04-09 12:19:46,454 - root - INFO - Application started
+2025-04-09 12:19:46,457 - root - INFO - CSS styles loaded.
+2025-04-09 12:19:46,459 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:19:46,624 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:19:47,143 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:28:40,050 - root - INFO - Application started
+2025-04-09 12:28:40,070 - root - INFO - CSS styles loaded.
+2025-04-09 12:28:40,097 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:28:40,228 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:28:40,388 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:35:01,233 - root - INFO - Application started
+2025-04-09 12:35:01,247 - root - INFO - CSS styles loaded.
+2025-04-09 12:35:01,279 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:35:01,646 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:35:01,686 - services.ml_service - INFO - Generated and saved synthetic evaluation cohort with 50 patients
+2025-04-09 12:35:02,028 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:36:02,553 - root - INFO - Application started
+2025-04-09 12:36:02,564 - root - INFO - CSS styles loaded.
+2025-04-09 12:36:02,802 - root - INFO - Application started
+2025-04-09 12:36:02,810 - root - INFO - CSS styles loaded.
+2025-04-09 12:36:02,816 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:36:02,899 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:36:03,098 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:36:03,106 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:36:03,107 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:36:25,819 - root - INFO - Application started
+2025-04-09 12:36:25,828 - root - INFO - CSS styles loaded.
+2025-04-09 12:36:26,027 - root - INFO - Application started
+2025-04-09 12:36:26,049 - root - INFO - CSS styles loaded.
+2025-04-09 12:36:26,091 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-09 12:36:26,104 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:36:26,109 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:36:26,112 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:36:26,725 - root - INFO - Application started
+2025-04-09 12:36:26,728 - root - INFO - CSS styles loaded.
+2025-04-09 12:36:26,814 - root - INFO - Application started
+2025-04-09 12:36:26,818 - root - INFO - CSS styles loaded.
+2025-04-09 12:36:26,829 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:36:27,030 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:37:33,758 - root - INFO - Application started
+2025-04-09 12:37:33,774 - root - INFO - CSS styles loaded.
+2025-04-09 12:37:33,829 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:37:34,343 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:38:17,070 - root - INFO - Application started
+2025-04-09 12:38:17,075 - root - INFO - CSS styles loaded.
+2025-04-09 12:38:17,091 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:38:17,542 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:39:21,124 - root - INFO - Application started
+2025-04-09 12:39:21,134 - root - INFO - CSS styles loaded.
+2025-04-09 12:39:21,139 - root - INFO - Routing to page: Performance ML
+2025-04-09 12:39:21,396 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 12:39:31,966 - root - INFO - Application started
+2025-04-09 12:39:31,976 - root - INFO - CSS styles loaded.
+2025-04-09 12:39:32,205 - root - INFO - Application started
+2025-04-09 12:39:32,219 - root - INFO - CSS styles loaded.
+2025-04-09 12:39:32,222 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:39:44,629 - root - INFO - Application started
+2025-04-09 12:39:44,646 - root - INFO - CSS styles loaded.
+2025-04-09 12:39:44,870 - root - INFO - Application started
+2025-04-09 12:39:44,873 - root - INFO - CSS styles loaded.
+2025-04-09 12:39:44,875 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:39:44,923 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:39:45,129 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:39:45,132 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:39:45,134 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:40:41,883 - root - INFO - Application started
+2025-04-09 12:40:41,894 - root - INFO - CSS styles loaded.
+2025-04-09 12:40:42,105 - root - INFO - Application started
+2025-04-09 12:40:42,112 - root - INFO - CSS styles loaded.
+2025-04-09 12:40:42,118 - root - INFO - Routing to page: Plan de Soins et Entrées Infirmières
+2025-04-09 12:40:49,962 - root - INFO - Application started
+2025-04-09 12:40:49,973 - root - INFO - CSS styles loaded.
+2025-04-09 12:40:50,251 - root - INFO - Application started
+2025-04-09 12:40:50,254 - root - INFO - CSS styles loaded.
+2025-04-09 12:40:50,272 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:40:50,352 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:40:50,543 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:40:50,548 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:40:50,549 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:40:55,848 - root - INFO - Application started
+2025-04-09 12:40:55,859 - root - INFO - CSS styles loaded.
+2025-04-09 12:40:56,038 - root - INFO - Application started
+2025-04-09 12:40:56,042 - root - INFO - CSS styles loaded.
+2025-04-09 12:40:56,061 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-09 12:40:56,078 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:40:56,081 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:40:56,083 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:41:04,269 - root - INFO - Application started
+2025-04-09 12:41:04,278 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:04,465 - root - INFO - Application started
+2025-04-09 12:41:04,473 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:04,479 - root - INFO - Routing to page: Plan de Soins et Entrées Infirmières
+2025-04-09 12:41:05,601 - root - INFO - Application started
+2025-04-09 12:41:05,607 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:05,696 - root - INFO - Application started
+2025-04-09 12:41:05,703 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:05,709 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:41:05,741 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:41:05,926 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:41:05,930 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:41:05,932 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:41:07,956 - root - INFO - Application started
+2025-04-09 12:41:07,963 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:08,059 - root - INFO - Application started
+2025-04-09 12:41:08,063 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:08,066 - root - INFO - Routing to page: Parcours Patient
+2025-04-09 12:41:08,072 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:41:08,074 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:41:08,075 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:41:23,870 - root - INFO - Application started
+2025-04-09 12:41:23,888 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:24,074 - root - INFO - Application started
+2025-04-09 12:41:24,077 - root - INFO - CSS styles loaded.
+2025-04-09 12:41:24,081 - root - INFO - Routing to page: Analyse des Protocoles
+2025-04-09 12:42:04,757 - root - INFO - Application started
+2025-04-09 12:42:04,769 - root - INFO - CSS styles loaded.
+2025-04-09 12:42:04,940 - root - INFO - Application started
+2025-04-09 12:42:04,943 - root - INFO - CSS styles loaded.
+2025-04-09 12:42:04,946 - root - INFO - Routing to page: Plan de Soins et Entrées Infirmières
+2025-04-09 12:42:08,051 - root - INFO - Application started
+2025-04-09 12:42:08,060 - root - INFO - CSS styles loaded.
+2025-04-09 12:42:08,290 - root - INFO - Application started
+2025-04-09 12:42:08,301 - root - INFO - CSS styles loaded.
+2025-04-09 12:42:08,308 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-09 12:42:08,312 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:42:08,317 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:42:08,320 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:43:07,795 - root - INFO - Application started
+2025-04-09 12:43:11,594 - root - INFO - Application started
+2025-04-09 12:43:14,125 - root - INFO - Application started
+2025-04-09 12:43:14,271 - root - INFO - Application started
+2025-04-09 12:43:14,317 - root - INFO - Application started
+2025-04-09 12:43:14,320 - root - INFO - Running database initialization check...
+2025-04-09 12:43:14,320 - root - INFO - Initializing database...
+2025-04-09 12:43:14,326 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 12:43:14,327 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 12:43:14,327 - root - INFO - Table 'patients' checked/created.
+2025-04-09 12:43:14,327 - root - INFO - Database initialization complete.
+2025-04-09 12:43:14,327 - root - INFO - Database initialization check complete.
+2025-04-09 12:43:14,329 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:14,496 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 12:43:14,496 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 12:43:14,496 - root - INFO - ML model initialized successfully
+2025-04-09 12:43:14,496 - root - INFO - Data loaded successfully.
+2025-04-09 12:43:14,497 - root - INFO - Default patient set: P001
+2025-04-09 12:43:14,501 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:43:20,875 - root - INFO - Application started
+2025-04-09 12:43:20,883 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:20,981 - root - INFO - Application started
+2025-04-09 12:43:20,995 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:21,004 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:43:21,056 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:43:21,509 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:43:21,515 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:43:21,518 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:43:36,270 - root - INFO - Application started
+2025-04-09 12:43:39,753 - root - INFO - Application started
+2025-04-09 12:43:42,010 - root - INFO - Application started
+2025-04-09 12:43:42,143 - root - INFO - Application started
+2025-04-09 12:43:45,811 - root - INFO - Application started
+2025-04-09 12:43:45,983 - root - INFO - Application started
+2025-04-09 12:43:45,991 - root - INFO - Running database initialization check...
+2025-04-09 12:43:45,992 - root - INFO - Initializing database...
+2025-04-09 12:43:45,994 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 12:43:45,995 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 12:43:45,995 - root - INFO - Table 'patients' checked/created.
+2025-04-09 12:43:45,995 - root - INFO - Database initialization complete.
+2025-04-09 12:43:45,996 - root - INFO - Database initialization check complete.
+2025-04-09 12:43:45,998 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:46,144 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 12:43:46,144 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 12:43:46,144 - root - INFO - ML model initialized successfully
+2025-04-09 12:43:46,145 - root - INFO - Data loaded successfully.
+2025-04-09 12:43:46,145 - root - INFO - Default patient set: P001
+2025-04-09 12:43:46,148 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:43:53,191 - root - INFO - Application started
+2025-04-09 12:43:53,204 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:53,377 - root - INFO - Application started
+2025-04-09 12:43:53,380 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:53,383 - root - INFO - Routing to page: Suivi des Effets Secondaires
+2025-04-09 12:43:53,389 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:43:53,392 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:43:53,394 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:43:54,204 - root - INFO - Application started
+2025-04-09 12:43:54,211 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:54,296 - root - INFO - Application started
+2025-04-09 12:43:54,300 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:54,305 - root - INFO - Routing to page: Plan de Soins et Entrées Infirmières
+2025-04-09 12:43:56,871 - root - INFO - Application started
+2025-04-09 12:43:56,877 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:56,963 - root - INFO - Application started
+2025-04-09 12:43:56,996 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:57,008 - root - INFO - Routing to page: Parcours Patient
+2025-04-09 12:43:57,020 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:43:57,022 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:43:57,024 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:43:58,313 - root - INFO - Application started
+2025-04-09 12:43:58,319 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:58,403 - root - INFO - Application started
+2025-04-09 12:43:58,411 - root - INFO - CSS styles loaded.
+2025-04-09 12:43:58,418 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 12:43:58,457 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 12:43:58,840 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 12:43:58,842 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 12:43:58,843 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 12:44:55,069 - root - INFO - Application started
+2025-04-09 12:44:59,410 - root - INFO - Application started
+2025-04-09 12:45:01,670 - root - INFO - Application started
+2025-04-09 12:45:01,782 - root - INFO - Application started
+2025-04-09 12:45:01,840 - root - INFO - Application started
+2025-04-09 12:45:01,852 - root - INFO - Running database initialization check...
+2025-04-09 12:45:01,852 - root - INFO - Initializing database...
+2025-04-09 12:45:01,859 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 12:45:01,861 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 12:45:01,863 - root - INFO - Table 'patients' checked/created.
+2025-04-09 12:45:01,863 - root - INFO - Database initialization complete.
+2025-04-09 12:45:01,864 - root - INFO - Database initialization check complete.
+2025-04-09 12:45:01,868 - root - INFO - CSS styles loaded.
+2025-04-09 12:45:02,031 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 12:45:02,031 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 12:45:02,031 - root - INFO - ML model initialized successfully
+2025-04-09 12:45:02,032 - root - INFO - Data loaded successfully.
+2025-04-09 12:45:02,032 - root - INFO - Default patient set: P001
+2025-04-09 12:45:02,036 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 12:45:05,574 - root - INFO - Application started
+2025-04-09 12:45:05,585 - root - INFO - CSS styles loaded.
+2025-04-09 12:45:05,743 - root - INFO - Application started
+2025-04-09 12:45:05,755 - root - INFO - CSS styles loaded.
+2025-04-09 12:45:05,762 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 20:19:24,540 - root - INFO - Application started
+2025-04-09 20:19:27,375 - root - INFO - Application started
+2025-04-09 20:19:29,924 - root - INFO - Application started
+2025-04-09 20:19:30,065 - root - INFO - Application started
+2025-04-09 20:19:30,111 - root - INFO - Application started
+2025-04-09 20:19:30,117 - root - INFO - Running database initialization check...
+2025-04-09 20:19:30,119 - root - INFO - Initializing database...
+2025-04-09 20:19:30,124 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 20:19:30,124 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 20:19:30,124 - root - INFO - Table 'patients' checked/created.
+2025-04-09 20:19:30,124 - root - INFO - Database initialization complete.
+2025-04-09 20:19:30,124 - root - INFO - Database initialization check complete.
+2025-04-09 20:19:30,125 - root - INFO - CSS styles loaded.
+2025-04-09 20:19:30,233 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 20:19:30,233 - services.ml_service - INFO - Response prediction model already exists at /Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/data/response_prediction_model.pkl
+2025-04-09 20:19:30,233 - root - INFO - ML model initialized successfully
+2025-04-09 20:19:30,234 - root - INFO - Data loaded successfully.
+2025-04-09 20:19:30,234 - root - INFO - Default patient set: P001
+2025-04-09 20:19:30,236 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 20:19:34,219 - root - INFO - Application started
+2025-04-09 20:19:34,232 - root - INFO - CSS styles loaded.
+2025-04-09 20:19:34,261 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 20:19:34,414 - root - INFO - Application started
+2025-04-09 20:19:34,416 - root - INFO - CSS styles loaded.
+2025-04-09 20:19:34,418 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 20:19:34,444 - services.ml_service - INFO - Imputed 1 features with less than 30.0% missing values
+2025-04-09 20:19:34,948 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 20:19:34,950 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 20:19:34,951 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 20:19:50,010 - root - INFO - Application started
+2025-04-09 20:19:50,018 - root - INFO - CSS styles loaded.
+2025-04-09 20:19:50,232 - root - INFO - Application started
+2025-04-09 20:19:50,234 - root - INFO - CSS styles loaded.
+2025-04-09 20:19:50,246 - root - INFO - Routing to page: Performance ML
+2025-04-09 20:19:50,632 - services.ml_service - INFO - Imputed 15 features with less than 30.0% missing values
+2025-04-09 21:04:11,498 - root - INFO - Application started
+2025-04-09 21:04:21,080 - root - INFO - Application started
+2025-04-09 21:04:24,098 - root - INFO - Application started
+2025-04-09 21:04:26,004 - root - INFO - Application started
+2025-04-09 21:04:27,721 - root - INFO - Application started
+2025-04-09 21:04:27,897 - root - INFO - Application started
+2025-04-09 21:04:27,909 - root - INFO - Running database initialization check...
+2025-04-09 21:04:27,909 - root - INFO - Initializing database...
+2025-04-09 21:04:27,915 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 21:04:27,915 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 21:04:27,915 - root - INFO - Table 'patients' checked/created.
+2025-04-09 21:04:27,915 - root - INFO - Database initialization complete.
+2025-04-09 21:04:27,916 - root - INFO - Database initialization check complete.
+2025-04-09 21:04:27,918 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:28,039 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 21:04:28,039 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 21:04:28,039 - root - INFO - Data loaded successfully.
+2025-04-09 21:04:28,039 - root - INFO - Default patient set: P001
+2025-04-09 21:04:28,041 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:04:30,284 - root - INFO - Application started
+2025-04-09 21:04:30,291 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:30,310 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:04:30,536 - root - INFO - Application started
+2025-04-09 21:04:30,542 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:30,547 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:04:30,562 - root - ERROR - Error loading ML prediction for patient P001
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/dashboard.py", line 287, in patient_dashboard
+    from services.ml_service import predict_response_probability
+ImportError: cannot import name 'predict_response_probability' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 21:04:31,142 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 21:04:31,144 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 21:04:31,145 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 21:04:37,729 - root - INFO - Application started
+2025-04-09 21:04:37,741 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:38,017 - root - INFO - Application started
+2025-04-09 21:04:38,019 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:38,021 - root - INFO - Routing to page: Performance ML
+2025-04-09 21:04:38,038 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:04:38,038 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:04:38,038 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:04:38,038 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:04:42,305 - root - INFO - Application started
+2025-04-09 21:04:42,314 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:42,520 - root - INFO - Application started
+2025-04-09 21:04:42,525 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:42,532 - root - INFO - Routing to page: Parcours Patient
+2025-04-09 21:04:42,541 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 21:04:42,550 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 21:04:42,554 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 21:04:43,446 - root - INFO - Application started
+2025-04-09 21:04:43,453 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:43,537 - root - INFO - Application started
+2025-04-09 21:04:43,542 - root - INFO - CSS styles loaded.
+2025-04-09 21:04:43,547 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:04:43,558 - root - ERROR - Error loading ML prediction for patient P001
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/dashboard.py", line 287, in patient_dashboard
+    from services.ml_service import predict_response_probability
+ImportError: cannot import name 'predict_response_probability' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 21:04:43,714 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 21:04:43,715 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 21:04:43,717 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 21:06:02,370 - root - INFO - Application started
+2025-04-09 21:06:05,153 - root - INFO - Application started
+2025-04-09 21:06:06,643 - root - INFO - Application started
+2025-04-09 21:06:07,686 - root - INFO - Application started
+2025-04-09 21:06:07,754 - root - INFO - Application started
+2025-04-09 21:06:07,764 - root - INFO - CSS styles loaded.
+2025-04-09 21:06:07,873 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 21:06:07,873 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 21:06:07,873 - root - INFO - Data loaded successfully.
+2025-04-09 21:06:07,874 - root - INFO - Default patient set: P001
+2025-04-09 21:06:07,876 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:06:09,973 - root - INFO - Application started
+2025-04-09 21:06:09,980 - root - INFO - CSS styles loaded.
+2025-04-09 21:06:09,990 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:06:10,078 - root - INFO - Application started
+2025-04-09 21:06:10,096 - root - INFO - CSS styles loaded.
+2025-04-09 21:06:10,098 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:06:10,124 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:06:10,124 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:06:10,124 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:06:10,124 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:06:10,125 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:06:10,125 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:06:10,125 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:06:10,125 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:06:10,128 - root - ERROR - Error loading ML prediction for patient P001
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/dashboard.py", line 294, in patient_dashboard
+    color = "#4CAF50" if response_prob >= 50 else "#FF5722"
+                         ^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'dict' and 'int'
+2025-04-09 21:06:10,326 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 21:06:10,327 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 21:06:10,328 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 21:07:30,392 - root - INFO - Application started
+2025-04-09 21:07:32,932 - root - INFO - Application started
+2025-04-09 21:07:34,322 - root - INFO - Application started
+2025-04-09 21:07:35,419 - root - INFO - Application started
+2025-04-09 21:07:35,481 - root - INFO - Application started
+2025-04-09 21:07:35,491 - root - INFO - Running database initialization check...
+2025-04-09 21:07:35,491 - root - INFO - Initializing database...
+2025-04-09 21:07:35,494 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 21:07:35,494 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 21:07:35,495 - root - INFO - Table 'patients' checked/created.
+2025-04-09 21:07:35,495 - root - INFO - Database initialization complete.
+2025-04-09 21:07:35,495 - root - INFO - Database initialization check complete.
+2025-04-09 21:07:35,496 - root - INFO - CSS styles loaded.
+2025-04-09 21:07:35,600 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 21:07:35,600 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 21:07:35,600 - root - INFO - Data loaded successfully.
+2025-04-09 21:07:35,600 - root - INFO - Default patient set: P001
+2025-04-09 21:07:35,603 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:07:37,326 - root - INFO - Application started
+2025-04-09 21:07:37,335 - root - INFO - CSS styles loaded.
+2025-04-09 21:07:37,343 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:07:37,466 - root - INFO - Application started
+2025-04-09 21:07:37,468 - root - INFO - CSS styles loaded.
+2025-04-09 21:07:37,470 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:07:37,491 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:07:37,491 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:07:37,492 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:07:37,492 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:07:37,493 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:07:37,493 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:07:37,493 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:07:37,493 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:07:37,495 - root - ERROR - Error loading ML prediction for patient P001
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/dashboard.py", line 294, in patient_dashboard
+    color = "#4CAF50" if response_prob >= 50 else "#FF5722"
+                         ^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'dict' and 'int'
+2025-04-09 21:07:37,841 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 21:07:37,842 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 21:07:37,843 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 21:20:05,005 - root - INFO - Application started
+2025-04-09 21:20:11,120 - root - INFO - Application started
+2025-04-09 21:20:18,278 - root - INFO - Application started
+2025-04-09 21:20:18,443 - root - INFO - Application started
+2025-04-09 21:20:18,501 - root - INFO - Application started
+2025-04-09 21:20:18,512 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:18,652 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 21:20:18,652 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 21:20:18,652 - root - INFO - Data loaded successfully.
+2025-04-09 21:20:18,652 - root - INFO - Default patient set: P001
+2025-04-09 21:20:18,655 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:20:22,914 - root - INFO - Application started
+2025-04-09 21:20:22,926 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:22,938 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:20:23,109 - root - INFO - Application started
+2025-04-09 21:20:23,114 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:23,121 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:20:23,146 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:23,146 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:23,146 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:20:23,146 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:20:23,147 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:23,147 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:23,148 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:23,148 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:23,346 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 21:20:23,347 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 21:20:23,348 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 21:20:35,495 - root - INFO - Application started
+2025-04-09 21:20:35,503 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:35,709 - root - INFO - Application started
+2025-04-09 21:20:35,714 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:35,721 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:20:35,741 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:35,741 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:35,741 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:20:35,741 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:20:35,742 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:35,742 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:35,742 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:35,742 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:35,933 - root - INFO - Retrieved 1 side effect records from database for patient P002
+2025-04-09 21:20:40,888 - root - INFO - Application started
+2025-04-09 21:20:40,899 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:41,062 - root - INFO - Application started
+2025-04-09 21:20:41,064 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:41,065 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:20:41,105 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:41,105 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:41,105 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:20:41,105 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:20:41,106 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:41,106 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:41,106 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:41,106 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:20:41,355 - root - WARNING - No side effect data found for patient P004 in database or CSV
+2025-04-09 21:20:48,319 - root - INFO - Application started
+2025-04-09 21:20:48,328 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:48,478 - root - INFO - Application started
+2025-04-09 21:20:48,513 - root - INFO - CSS styles loaded.
+2025-04-09 21:20:48,525 - root - INFO - Routing to page: Performance ML
+2025-04-09 21:20:48,537 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:48,537 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:20:48,537 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:20:48,537 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:32:19,050 - root - INFO - Application started
+2025-04-09 21:32:21,836 - root - INFO - Application started
+2025-04-09 21:32:23,174 - root - INFO - Application started
+2025-04-09 21:32:25,211 - root - INFO - Application started
+2025-04-09 21:32:25,353 - root - INFO - Application started
+2025-04-09 21:32:25,363 - root - INFO - Running database initialization check...
+2025-04-09 21:32:25,363 - root - INFO - Initializing database...
+2025-04-09 21:32:25,366 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 21:32:25,367 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 21:32:25,367 - root - INFO - Table 'patients' checked/created.
+2025-04-09 21:32:25,367 - root - INFO - Database initialization complete.
+2025-04-09 21:32:25,367 - root - INFO - Database initialization check complete.
+2025-04-09 21:32:25,368 - root - INFO - CSS styles loaded.
+2025-04-09 21:32:25,498 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 21:32:25,498 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 21:32:25,498 - root - INFO - Data loaded successfully.
+2025-04-09 21:32:25,498 - root - INFO - Default patient set: P001
+2025-04-09 21:32:25,501 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:32:29,690 - root - INFO - Application started
+2025-04-09 21:32:29,700 - root - INFO - CSS styles loaded.
+2025-04-09 21:32:29,721 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 21:32:29,877 - root - INFO - Application started
+2025-04-09 21:32:29,879 - root - INFO - CSS styles loaded.
+2025-04-09 21:32:29,882 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 21:32:29,917 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:32:29,917 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 21:32:29,918 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:32:29,918 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 338, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 21:32:29,919 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:32:29,919 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:32:29,920 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:32:29,920 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 382, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 21:32:30,595 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 21:32:30,604 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 21:32:30,607 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:07:31,532 - root - INFO - Application started
+2025-04-09 22:07:34,246 - root - INFO - Application started
+2025-04-09 22:07:35,958 - root - INFO - Application started
+2025-04-09 22:07:37,155 - root - INFO - Application started
+2025-04-09 22:07:37,208 - root - INFO - Application started
+2025-04-09 22:07:37,217 - root - INFO - Running database initialization check...
+2025-04-09 22:07:37,217 - root - INFO - Initializing database...
+2025-04-09 22:07:37,222 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 22:07:37,223 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 22:07:37,223 - root - INFO - Table 'patients' checked/created.
+2025-04-09 22:07:37,223 - root - INFO - Database initialization complete.
+2025-04-09 22:07:37,223 - root - INFO - Database initialization check complete.
+2025-04-09 22:07:37,226 - root - INFO - CSS styles loaded.
+2025-04-09 22:07:37,461 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 22:07:37,461 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:07:37,461 - root - INFO - Data loaded successfully.
+2025-04-09 22:07:37,462 - root - INFO - Default patient set: P001
+2025-04-09 22:07:37,464 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:08:09,533 - root - INFO - Application started
+2025-04-09 22:08:09,559 - root - INFO - CSS styles loaded.
+2025-04-09 22:08:09,589 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:08:09,750 - root - INFO - Application started
+2025-04-09 22:08:09,752 - root - INFO - CSS styles loaded.
+2025-04-09 22:08:09,754 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:08:09,810 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:08:09,810 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:08:09,810 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:08:09,810 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:08:09,811 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:09,811 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:09,811 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:09,811 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:10,398 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:08:10,401 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:08:10,402 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:08:18,322 - root - INFO - Application started
+2025-04-09 22:08:18,327 - root - INFO - CSS styles loaded.
+2025-04-09 22:08:18,567 - root - INFO - Application started
+2025-04-09 22:08:18,573 - root - INFO - CSS styles loaded.
+2025-04-09 22:08:18,581 - root - INFO - Routing to page: Performance ML
+2025-04-09 22:08:18,621 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 168, in ml_performance_page
+    cohort = generate_evaluation_cohort(n_patients=50)
+TypeError: generate_evaluation_cohort() got an unexpected keyword argument 'n_patients'
+2025-04-09 22:08:19,168 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 354, in ml_performance_page
+    from services.ml_service import preprocess_features, create_response_labels
+ImportError: cannot import name 'preprocess_features' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:08:32,755 - root - INFO - Application started
+2025-04-09 22:08:32,832 - root - INFO - CSS styles loaded.
+2025-04-09 22:08:33,064 - root - INFO - Application started
+2025-04-09 22:08:33,074 - root - INFO - CSS styles loaded.
+2025-04-09 22:08:33,076 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:08:33,110 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:08:33,110 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:08:33,111 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:08:33,111 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:08:33,112 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:33,112 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:33,112 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:33,112 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:08:33,327 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:08:33,329 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:08:33,330 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:23:34,177 - root - INFO - Application started
+2025-04-09 22:23:42,750 - root - INFO - Application started
+2025-04-09 22:23:44,558 - root - INFO - Application started
+2025-04-09 22:23:46,124 - root - INFO - Application started
+2025-04-09 22:23:46,254 - root - INFO - Application started
+2025-04-09 22:23:46,264 - root - INFO - CSS styles loaded.
+2025-04-09 22:23:46,423 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 22:23:46,423 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:23:46,424 - root - INFO - Data loaded successfully.
+2025-04-09 22:23:46,424 - root - INFO - Default patient set: P001
+2025-04-09 22:23:46,426 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:23:47,930 - root - INFO - Application started
+2025-04-09 22:23:47,939 - root - INFO - CSS styles loaded.
+2025-04-09 22:23:48,117 - root - INFO - Application started
+2025-04-09 22:23:48,123 - root - INFO - CSS styles loaded.
+2025-04-09 22:23:48,130 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:24:04,182 - root - INFO - Application started
+2025-04-09 22:24:04,189 - root - INFO - CSS styles loaded.
+2025-04-09 22:24:04,396 - root - INFO - Application started
+2025-04-09 22:24:04,402 - root - INFO - CSS styles loaded.
+2025-04-09 22:24:04,411 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:24:04,521 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:24:04,521 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:24:04,522 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:24:04,522 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:24:04,524 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:24:04,524 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:24:04,524 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:24:04,524 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:24:04,806 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:24:04,808 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:24:04,809 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:42:47,588 - root - INFO - Application started
+2025-04-09 22:42:49,655 - root - INFO - Application started
+2025-04-09 22:42:50,481 - root - INFO - Application started
+2025-04-09 22:42:53,310 - root - INFO - Application started
+2025-04-09 22:42:54,323 - root - INFO - Application started
+2025-04-09 22:42:54,399 - root - INFO - Application started
+2025-04-09 22:42:54,408 - root - INFO - CSS styles loaded.
+2025-04-09 22:42:54,570 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 22:42:54,570 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:42:54,570 - root - INFO - Data loaded successfully.
+2025-04-09 22:42:54,570 - root - INFO - Default patient set: P001
+2025-04-09 22:42:54,572 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:43:01,544 - root - INFO - Application started
+2025-04-09 22:43:01,554 - root - INFO - CSS styles loaded.
+2025-04-09 22:43:01,565 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:43:03,492 - root - INFO - Application started
+2025-04-09 22:43:03,498 - root - INFO - CSS styles loaded.
+2025-04-09 22:43:03,505 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:43:03,581 - root - INFO - Application started
+2025-04-09 22:43:03,583 - root - INFO - CSS styles loaded.
+2025-04-09 22:43:03,585 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:43:03,646 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:43:03,646 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:43:03,646 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:43:03,646 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:43:03,647 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:43:03,647 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:43:03,647 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:43:03,647 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:43:03,846 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:43:03,847 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:43:03,848 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:43:23,171 - root - INFO - Application started
+2025-04-09 22:43:23,183 - root - INFO - CSS styles loaded.
+2025-04-09 22:43:23,402 - root - INFO - Application started
+2025-04-09 22:43:23,409 - root - INFO - CSS styles loaded.
+2025-04-09 22:43:23,416 - root - INFO - Routing to page: Performance ML
+2025-04-09 22:43:23,444 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 168, in ml_performance_page
+    cohort = generate_evaluation_cohort(n_patients=50)
+TypeError: generate_evaluation_cohort() got an unexpected keyword argument 'n_patients'
+2025-04-09 22:43:23,527 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 354, in ml_performance_page
+    from services.ml_service import preprocess_features, create_response_labels
+ImportError: cannot import name 'preprocess_features' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:44:10,491 - root - INFO - Application started
+2025-04-09 22:44:10,504 - root - INFO - CSS styles loaded.
+2025-04-09 22:44:10,702 - root - INFO - Application started
+2025-04-09 22:44:10,705 - root - INFO - CSS styles loaded.
+2025-04-09 22:44:10,709 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:44:10,759 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:44:10,759 - ml_service - ERROR - Error loading model: list indices must be integers or slices, not str
+2025-04-09 22:44:10,759 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:44:10,759 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 376, in load_model
+    self.selected_features = saved_data['features']
+                             ~~~~~~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-04-09 22:44:10,760 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:44:10,760 - ml_service - ERROR - Error making prediction: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:44:10,760 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:44:10,760 - ml_service - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py", line 439, in predict_response_probability
+    response_prob = self.model.predict_proba(patient_data)[:, 1][0]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/ensemble/_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        X,
+    ...<3 lines>...
+        force_all_finite=force_all_finite,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 608, in _validate_data
+    self._check_feature_names(X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/base.py", line 535, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ID
+- Timestamp
+- age
+- age_onset_bl
+- alcool_bl
+- ...
+
+2025-04-09 22:44:10,954 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:44:10,956 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:44:10,957 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:45:07,892 - root - INFO - Application started
+2025-04-09 22:45:10,244 - root - INFO - Application started
+2025-04-09 22:45:11,769 - root - INFO - Application started
+2025-04-09 22:45:12,822 - root - INFO - Application started
+2025-04-09 22:45:12,895 - root - INFO - Application started
+2025-04-09 22:45:12,897 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:13,016 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 22:45:13,016 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:45:13,016 - root - INFO - Data loaded successfully.
+2025-04-09 22:45:13,017 - root - INFO - Default patient set: P001
+2025-04-09 22:45:13,019 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:45:15,758 - root - INFO - Application started
+2025-04-09 22:45:15,765 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:15,883 - root - INFO - Application started
+2025-04-09 22:45:15,889 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:15,894 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:45:16,050 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:45:16,055 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:45:16,057 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:45:43,626 - root - INFO - Application started
+2025-04-09 22:45:46,559 - root - INFO - Application started
+2025-04-09 22:45:49,159 - root - INFO - Application started
+2025-04-09 22:45:49,250 - root - INFO - Application started
+2025-04-09 22:45:49,317 - root - INFO - Application started
+2025-04-09 22:45:49,322 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:49,430 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 22:45:49,430 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:45:49,430 - root - INFO - Data loaded successfully.
+2025-04-09 22:45:49,431 - root - INFO - Default patient set: P001
+2025-04-09 22:45:49,433 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:45:54,653 - root - INFO - Application started
+2025-04-09 22:45:54,665 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:54,852 - root - INFO - Application started
+2025-04-09 22:45:54,854 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:54,856 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:45:56,522 - root - INFO - Application started
+2025-04-09 22:45:56,528 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:56,538 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:45:56,624 - root - INFO - Application started
+2025-04-09 22:45:56,632 - root - INFO - CSS styles loaded.
+2025-04-09 22:45:56,635 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:45:56,737 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:45:56,739 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:45:56,739 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:46:26,257 - root - INFO - Application started
+2025-04-09 22:46:28,222 - root - INFO - Application started
+2025-04-09 22:46:30,824 - root - INFO - Application started
+2025-04-09 22:46:30,921 - root - INFO - Application started
+2025-04-09 22:46:30,974 - root - INFO - Application started
+2025-04-09 22:46:30,976 - root - INFO - Running database initialization check...
+2025-04-09 22:46:30,976 - root - INFO - Initializing database...
+2025-04-09 22:46:30,980 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-09 22:46:30,981 - root - INFO - Table 'side_effects' checked/created.
+2025-04-09 22:46:30,981 - root - INFO - Table 'patients' checked/created.
+2025-04-09 22:46:30,981 - root - INFO - Database initialization complete.
+2025-04-09 22:46:30,982 - root - INFO - Database initialization check complete.
+2025-04-09 22:46:30,983 - root - INFO - CSS styles loaded.
+2025-04-09 22:46:31,128 - root - INFO - Extended ML data loaded and merged successfully with 1055 records
+2025-04-09 22:46:31,128 - root - ERROR - Error initializing ML model: cannot import name 'initialize_ml_model' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)
+2025-04-09 22:46:31,128 - root - INFO - Data loaded successfully.
+2025-04-09 22:46:31,128 - root - INFO - Default patient set: P001
+2025-04-09 22:46:31,132 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:46:36,573 - root - INFO - Application started
+2025-04-09 22:46:36,593 - root - INFO - CSS styles loaded.
+2025-04-09 22:46:36,609 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-09 22:46:36,788 - root - INFO - Application started
+2025-04-09 22:46:36,790 - root - INFO - CSS styles loaded.
+2025-04-09 22:46:36,792 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-09 22:46:37,161 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-09 22:46:37,163 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-09 22:46:37,164 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-09 22:46:56,658 - root - INFO - Application started
+2025-04-09 22:46:56,670 - root - INFO - CSS styles loaded.
+2025-04-09 22:46:56,822 - root - INFO - Application started
+2025-04-09 22:46:56,835 - root - INFO - CSS styles loaded.
+2025-04-09 22:46:56,862 - root - INFO - Routing to page: Performance ML
+2025-04-09 22:46:56,901 - root - ERROR - Error calculating performance metrics
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 168, in ml_performance_page
+    cohort = generate_evaluation_cohort(n_patients=50)
+TypeError: generate_evaluation_cohort() got an unexpected keyword argument 'n_patients'
+2025-04-09 22:46:57,218 - root - ERROR - Error evaluating model
+Traceback (most recent call last):
+  File "/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/components/ml_performance.py", line 354, in ml_performance_page
+    from services.ml_service import preprocess_features, create_response_labels
+ImportError: cannot import name 'preprocess_features' from 'services.ml_service' (/Users/laurentelkrief/Desktop/Neuromod/Research/TableaudeBord/TableaudeBord6.0/services/ml_service.py)

@@ -3,6 +3,8 @@ paths:
   patient_data_with_protocol: "data/patient_data_with_protocol_simulated.csv"
   patient_data: "data/patient_data_simulated.csv"
   simulated_ema_data: "data/simulated_ema_data.csv"
+  extended_patient_data: "data/extended_patient_data.csv"  # Add this line
+
 mappings:
   madrs_items:
     1: Tristesse Apparente

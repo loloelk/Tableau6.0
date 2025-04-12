@@ -2,7 +2,7 @@
 import streamlit as st
 import re
 import logging
-from datetime import datetime # <--- ADD THIS LINE
+from datetime import datetime
 
 # --- Helper Function ---
 def extract_number(id_str):
@@ -11,15 +11,15 @@ def extract_number(id_str):
     return int(match.group()) if match else float('inf') # Return infinity for non-numeric to sort last
 
 # --- Role-Based Page Access ---
-# (Removed "Détails PID-5" as per previous step)
+# Define role permissions
 ROLE_PERMISSIONS = {
     "admin": [ "Vue d'Ensemble", "Tableau de Bord du Patient", "Parcours Patient", "Analyse des Protocoles",
-               "Plan de Soins et Entrées Infirmières", "Suivi des Effets Secondaires"],
+               "Plan de Soins et Entrées Infirmières", "Suivi des Effets Secondaires", "Performance ML", "Déconnexion"],
     "md": [ "Vue d'Ensemble", "Tableau de Bord du Patient", "Parcours Patient", "Analyse des Protocoles",
-             "Suivi des Effets Secondaires"],
+             "Suivi des Effets Secondaires", "Performance ML", "Déconnexion"],
     "nurse": [ "Vue d'Ensemble", "Tableau de Bord du Patient", "Parcours Patient",
-               "Plan de Soins et Entrées Infirmières", "Suivi des Effets Secondaires"],
-    "default": ["Vue d'Ensemble"] # Fallback role
+               "Plan de Soins et Entrées Infirmières", "Suivi des Effets Secondaires", "Déconnexion"],
+    "default": ["Vue d'Ensemble", "Déconnexion"] # Fallback role
 }
 
 # --- Main Sidebar Rendering Function ---
@@ -99,7 +99,9 @@ def render_sidebar():
             "Parcours Patient": "Chronologie des événements clés du patient.",
             "Analyse des Protocoles": "Comparaison de l'efficacité des protocoles TMS.",
             "Plan de Soins et Entrées Infirmières": "Ajouter/modifier le plan de soins et historique.",
-            "Suivi des Effets Secondaires": "Ajouter/voir l'historique des effets secondaires."
+            "Suivi des Effets Secondaires": "Ajouter/voir l'historique des effets secondaires.",
+            "Performance ML": "Analyse des performances des modèles d'apprentissage automatique.",
+            "Déconnexion": "Se déconnecter du système."
         }
 
         # Filter options based on user role

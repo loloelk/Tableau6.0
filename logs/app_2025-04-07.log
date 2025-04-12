@@ -405,3 +405,32 @@
 2025-04-07 13:31:19,900 - root - INFO - Retrieved 3 side effect records from database for patient P001
 2025-04-07 13:31:19,902 - root - INFO - Fetched 3 side effect records from CSV for P001
 2025-04-07 13:31:19,904 - root - INFO - Found side effect data in both database and CSV for P001, using database data
+2025-04-07 20:00:38,929 - root - INFO - Application started
+2025-04-07 20:02:12,633 - root - INFO - Application started
+2025-04-07 20:02:13,990 - root - INFO - Application started
+2025-04-07 20:02:15,412 - root - INFO - Application started
+2025-04-07 20:02:15,476 - root - INFO - Application started
+2025-04-07 20:02:15,489 - root - INFO - Running database initialization check...
+2025-04-07 20:02:15,489 - root - INFO - Initializing database...
+2025-04-07 20:02:15,503 - root - INFO - Table 'nurse_inputs' checked/created.
+2025-04-07 20:02:15,503 - root - INFO - Table 'side_effects' checked/created.
+2025-04-07 20:02:15,503 - root - INFO - Table 'patients' checked/created.
+2025-04-07 20:02:15,503 - root - INFO - Database initialization complete.
+2025-04-07 20:02:15,504 - root - INFO - Database initialization check complete.
+2025-04-07 20:02:15,506 - root - INFO - CSS styles loaded.
+2025-04-07 20:02:15,566 - root - INFO - Data loaded successfully.
+2025-04-07 20:02:15,567 - root - INFO - Default patient set: P001
+2025-04-07 20:02:15,571 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 20:02:17,128 - root - INFO - Application started
+2025-04-07 20:02:17,150 - root - INFO - CSS styles loaded.
+2025-04-07 20:02:17,250 - root - INFO - Application started
+2025-04-07 20:02:17,260 - root - INFO - CSS styles loaded.
+2025-04-07 20:02:17,273 - root - INFO - Routing to page: Vue d'Ensemble
+2025-04-07 20:02:22,191 - root - INFO - Application started
+2025-04-07 20:02:22,198 - root - INFO - CSS styles loaded.
+2025-04-07 20:02:22,409 - root - INFO - Application started
+2025-04-07 20:02:22,418 - root - INFO - CSS styles loaded.
+2025-04-07 20:02:22,431 - root - INFO - Routing to page: Tableau de Bord du Patient
+2025-04-07 20:02:22,962 - root - INFO - Retrieved 3 side effect records from database for patient P001
+2025-04-07 20:02:22,965 - root - INFO - Fetched 3 side effect records from CSV for P001
+2025-04-07 20:02:22,966 - root - INFO - Found side effect data in both database and CSV for P001, using database data

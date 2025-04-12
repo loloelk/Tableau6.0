@@ -119,3 +119,75 @@ def merge_simulated_data(final_df: pd.DataFrame, ema_df: pd.DataFrame) -> pd.Dat
     # Assuming 'ID' in final_data corresponds to 'PatientID' in simulated_ema_data
     merged_df = final_df.merge(ema_df, how='left', left_on='ID', right_on='PatientID')
     return merged_df
+
+def load_extended_patient_data(csv_file: str) -> pd.DataFrame:
+    """
+    Load extended patient data with features for ML predictions.
+    
+    Parameters:
+    -----------
+    csv_file : str
+        Path to the CSV file containing extended patient data
+        
+    Returns:
+    --------
+    pd.DataFrame
+        DataFrame containing extended patient data
+    """
+    try:
+        data = pd.read_csv(csv_file, dtype={'ID': str}, encoding='utf-8')
+        logging.debug(f"Extended patient data loaded successfully from {csv_file} with 'utf-8' encoding.")
+        return data
+    except UnicodeDecodeError:
+        logging.warning(f"UnicodeDecodeError with 'utf-8' encoding for {csv_file}. Trying 'latin1'.")
+        try:
+            data = pd.read_csv(csv_file, dtype={'ID': str}, encoding='latin1')
+            logging.debug(f"Extended patient data loaded successfully from {csv_file} with 'latin1' encoding.")
+            return data
+        except Exception as e:
+            logging.error(f"Failed to load extended patient data from {csv_file}: {e}")
+            return pd.DataFrame()
+    except Exception as e:
+        logging.error(f"Failed to load extended patient data from {csv_file}: {e}")
+        return pd.DataFrame()
+
+def merge_with_ml_data(main_df: pd.DataFrame, extended_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Merge the main patient data with extended ML features.
+    
+    Parameters:
+    -----------
+    main_df : pd.DataFrame
+        DataFrame containing main patient data
+    extended_df : pd.DataFrame
+        DataFrame containing extended ML features
+        
+    Returns:
+    --------
+    pd.DataFrame
+        Merged DataFrame with all features
+    """
+    if extended_df.empty:
+        logging.warning("Extended ML data is empty. Skipping merge.")
+        return main_df
+    
+    try:
+        # Merge on patient ID
+        merged_df = main_df.merge(extended_df, how='left', on='ID', suffixes=('', '_ext'))
+        
+        # For duplicate columns, keep the original if not null, otherwise take from extended
+        for col in merged_df.columns:
+            if col.endswith('_ext'):
+                base_col = col[:-4]  # Remove '_ext' suffix
+                if base_col in merged_df.columns:
+                    # Fill NaN values in original column with values from extended column
+                    merged_df[base_col] = merged_df[base_col].fillna(merged_df[col])
+                    # Drop the extended column
+                    merged_df = merged_df.drop(col, axis=1)
+        
+        logging.debug(f"Merged main data with extended ML data successfully. Final shape: {merged_df.shape}")
+        return merged_df
+    
+    except Exception as e:
+        logging.error(f"Failed to merge with extended ML data: {e}")
+        return main_df

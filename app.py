@@ -20,7 +20,6 @@ except ImportError:
         def nurse_inputs_page():
             st.error("Composant de la page des entrées infirmières non trouvé.")
 
-
 # --- BFI MODIFICATION START: Remove PID-5 import ---
 # from components.pid5_details import details_pid5_page # REMOVED
 # --- BFI MODIFICATION END ---
@@ -28,6 +27,8 @@ from components.protocol_analysis import protocol_analysis_page
 from components.side_effects import side_effect_page
 from components.overview import main_dashboard_page
 from components.patient_journey import patient_journey_page
+from components.ml_performance import ml_performance_page
+from components.sign_out import sign_out_page
 
 # Import services
 from services.data_loader import load_patient_data, load_simulated_ema_data, validate_patient_data
@@ -151,17 +152,54 @@ if check_login():
     # Use paths from loaded config
     PATIENT_DATA_CSV = config.get('paths', {}).get('patient_data_with_protocol', 'data/patient_data_with_protocol_simulated.csv')
     SIMULATED_EMA_CSV = config.get('paths', {}).get('simulated_ema_data', 'data/simulated_ema_data.csv')
+    EXTENDED_DATA_CSV = config.get('paths', {}).get('extended_patient_data', 'data/extended_patient_data.csv')
 
 
-    st.session_state.setdefault('data_loaded', False) #
+    st.session_state.setdefault('data_loaded', False)
+    st.session_state.setdefault('ml_model_initialized', False)
     if not st.session_state.data_loaded:
         try:
+            # Load standard patient data
             final_data = load_patient_data(PATIENT_DATA_CSV)
             simulated_ema_data = load_simulated_ema_data(SIMULATED_EMA_CSV)
+            
             if final_data.empty:
                 st.error("❌ Aucune donnée patient principale chargée...")
                 st.stop()
-            validate_patient_data(final_data) # Validate the loaded data #
+            
+            validate_patient_data(final_data) # Validate the loaded data
+            
+            # Load extended data for ML if available
+            if os.path.exists(EXTENDED_DATA_CSV):
+                try:
+                    from services.data_loader import load_extended_patient_data, merge_with_ml_data
+                    extended_data = load_extended_patient_data(EXTENDED_DATA_CSV)
+                    
+                    if not extended_data.empty:
+                        # Merge with main data
+                        final_data = merge_with_ml_data(final_data, extended_data)
+                        logging.info(f"Extended ML data loaded and merged successfully with {len(extended_data)} records")
+                        
+                        # Initialize ML model
+                        if not st.session_state.ml_model_initialized:
+                            try:
+                                from services.ml_service import initialize_ml_model
+                                ml_init_status = initialize_ml_model(EXTENDED_DATA_CSV)
+                                st.session_state.ml_model_initialized = ml_init_status
+                                if ml_init_status:
+                                    logging.info("ML model initialized successfully")
+                                else:
+                                    logging.warning("ML model initialization failed")
+                            except Exception as e:
+                                logging.error(f"Error initializing ML model: {e}")
+                    else:
+                        logging.warning("Extended data file was empty, using only basic patient data")
+                except Exception as e:
+                    logging.error(f"Error loading extended data: {e}")
+            else:
+                logging.info(f"Extended data file not found at {EXTENDED_DATA_CSV}, ML features will not be available")
+            
+            # Store data in session state
             st.session_state.final_data = final_data
             st.session_state.simulated_ema_data = simulated_ema_data
             st.session_state.data_loaded = True # Mark data as loaded
@@ -248,6 +286,8 @@ if check_login():
         elif page_selected == "Plan de Soins et Entrées Infirmières": nurse_inputs_page()
         # elif page_selected == "Détails PID-5": details_pid5_page() # REMOVED
         elif page_selected == "Suivi des Effets Secondaires": side_effect_page()
+        elif page_selected == "Performance ML": ml_performance_page()
+        elif page_selected == "Déconnexion": sign_out_page()
         # --- BFI MODIFICATION END ---
         else:
             st.error(f"Page non reconnue ou non autorisée: '{page_selected}'.") #
