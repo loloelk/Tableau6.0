@@ -37,8 +37,29 @@ from dataclasses import dataclass
 from typing import Optional, List, Dict, Tuple
 
 import pandas as pd
+
+@dataclass
+class DataConfig:
+    patient_csv: str = DEFAULT_PATIENT_CSV
+    ema_csv: str = DEFAULT_EMA_CSV
+    nurse_csv: str = DEFAULT_NURSE_CSV
+
+@dataclass
+class Patient:
+    patient_id: str
+    sex: Optional[str] = None
+    age: Optional[int] = None
+    protocol: Optional[str] = None
+
+@dataclass
+class Assessment:
+    patient_id: str
+    date: pd.Timestamp
+    madrs_total: Optional[float] = None
+    phq9_total: Optional[float] = None
+
+
 import numpy as np
-from pydantic import BaseModel
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
