@@ -38,27 +38,6 @@ from typing import Optional, List, Dict, Tuple
 
 import pandas as pd
 
-@dataclass
-class DataConfig:
-    patient_csv: str = DEFAULT_PATIENT_CSV
-    ema_csv: str = DEFAULT_EMA_CSV
-    nurse_csv: str = DEFAULT_NURSE_CSV
-
-@dataclass
-class Patient:
-    patient_id: str
-    sex: Optional[str] = None
-    age: Optional[int] = None
-    protocol: Optional[str] = None
-
-@dataclass
-class Assessment:
-    patient_id: str
-    date: pd.Timestamp
-    madrs_total: Optional[float] = None
-    phq9_total: Optional[float] = None
-
-
 import numpy as np
 import streamlit as st
 import plotly.express as px
@@ -85,22 +64,28 @@ PROTOCOL_ORDER = ["HF-10Hz", "iTBS", "BR-18Hz", "Sham"]
 # -------------------------------
 # Data contracts
 # -------------------------------
-class DataConfig(BaseModel):
+from dataclasses import dataclass
+
+@dataclass
+class DataConfig:
     patient_csv: str = DEFAULT_PATIENT_CSV
     ema_csv: str = DEFAULT_EMA_CSV
     nurse_csv: str = DEFAULT_NURSE_CSV
 
-class Patient(BaseModel):
+@dataclass
+class Patient:
     patient_id: str
     sex: Optional[str] = None
     age: Optional[int] = None
     protocol: Optional[str] = None
 
-class Assessment(BaseModel):
+@dataclass
+class Assessment:
     patient_id: str
     date: pd.Timestamp
     madrs_total: Optional[float] = None
     phq9_total: Optional[float] = None
+
 
 # -------------------------------
 # Data sources (CSV now, REDCap later)
