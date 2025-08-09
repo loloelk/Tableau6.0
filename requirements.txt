@@ -1,7 +1,9 @@
 streamlit
 pandas
 numpy
+pydantic
 plotly
+pyvis
 networkx
 pyyaml
 statsmodels
